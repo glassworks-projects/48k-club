@@ -21,7 +21,7 @@ const Wrap = styled.section`
   background-color: black;
 `
 const Logo = styled.img`
-  position: fixed;
+  position: absolute;
   width: 135px;
   padding: 20px;
   z-index: 2;

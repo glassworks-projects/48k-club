@@ -1,5 +1,5 @@
 import React from "react"
-import {Wrapper, InLink, ExtLink, SVG, BlogPost} from "../components/export"
+import {Wrapper, InLink, ExtLink, SVG, BlogCarousel} from "../components/export"
 import typography from "../utils/typography"
 import { TypographyStyle, GoogleFont } from 'react-typography'
 import styled from "styled-components"
@@ -11,6 +11,19 @@ const HomeNav = styled.ul`
   list-style: none;
 `
 
+const BlueLi = styled.li`
+
+  color: white;
+  text-decoration: none;
+  cursor: inherit;
+
+  &:hover {
+    font-family: 'Cormorant Garamond';
+    font-weight: 500;
+    text-decoration: underline;
+    text-decoration-color: blue;
+  }
+`
 export default class Index extends React.Component {
 
   constructor(props) {
@@ -28,10 +41,9 @@ export default class Index extends React.Component {
     return (
       <Wrapper title="Home">
         <body>
-
           <HomeNav>
-            <li onClick={this.postLoad.bind(this)}>BLOG</li>
-            {this.state.showBlog && <BlogPost />}
+            <BlueLi onClick={this.postLoad.bind(this)}>BLOG</BlueLi>
+            {this.state.showBlog && <BlogCarousel />}
             <li><InLink to="releases">RELEASES</InLink></li>
             <li><ExtLink serif={true} href="https://48ksps.bigcartel.com">STORE</ExtLink></li>
             <li><InLink to="geofront">GEOFRONT</InLink></li>
@@ -39,7 +51,7 @@ export default class Index extends React.Component {
             <li><InLink to="about">ABOUT</InLink></li>
           </HomeNav>
           <SVG>
-            <polygon points="5,2 1200,2 5,680" />
+            <polygon points="0,2 1260,2 2,700" />
           </SVG>
         </body>
       </Wrapper>

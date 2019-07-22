@@ -1,8 +1,8 @@
 import React from "react"
 import { TypographyStyle, GoogleFont } from 'react-typography'
-import cathedral from "../media/cathedral.jpg"
-import lapse from "../media/lapse.jpg"
-import st from "../media/st.jpg"
+import cathedral from "../media/album-artwork/cathedral.jpg"
+import lapse from "../media/album-artwork/lapse.jpg"
+import st from "../media/album-artwork/st.jpg"
 import styled from "styled-components"
 import {Wrapper, Navigation, Bluebar, SVG, ExtLink} from "../components/export"
 import {releasetext} from "../text/release-about.json"
@@ -25,7 +25,7 @@ const ReleaseNames = styled.ul`
 `
 const ReleaseAbout = styled(Release)`
   position: fixed;
-  overflow: scroll;
+  ${'' /* overflow: scroll; */}
   margin-left:auto;
   margin-right:auto;
   left: 40%;
@@ -110,7 +110,7 @@ export default class Releases extends React.Component {
           <Navigation />
           <Bluebar name="RELEASES" />
           <SVG>
-            <line x1="35%" y1="0" x2="35%" y2="100%"
+            <line x1="35%" y1="70px" x2="35%" y2="100%"
               style={{stroke: `1px solid white`}}
             />
           </SVG>

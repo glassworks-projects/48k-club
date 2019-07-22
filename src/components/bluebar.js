@@ -16,9 +16,10 @@ const Blue = styled.div`
   background-color: blue;
 `
 const PageTitle = styled.div`
-  position: fixed;
+  position: absolute;
+  text-align: right;
   left: 87%;
-  top: 15%;
+  top: 30%;
   width: 250px;
   z-index: 0;
   font-size: 2em;

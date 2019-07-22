@@ -5,8 +5,8 @@ const typography = new Typography({
   baseLineHeight: 1,
 
   googleFonts: [
-    {name: 'Roboto', styles: ['500'],},
-    {name: 'Cormorant Garamond', styles: ['400', '500'],},
+    {name: 'Roboto', styles: ['300', '500'],},
+    {name: 'Cormorant Garamond', styles: ['400', '500', '600i'],},
   ],
 
   bodyFontFamily: ['Roboto', '500'],

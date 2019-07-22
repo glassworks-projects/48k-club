@@ -6,7 +6,7 @@ import { TypographyStyle, GoogleFont } from 'react-typography'
 import styled from "styled-components"
 
 const Nav = styled.ul`
-  position: fixed;
+  position: absolute;
   height: 70px;
   right: 0%;
   padding-top: 20px;
@@ -47,7 +47,7 @@ const ExtNavLink = styled.a`
 export default function Navigation () {
   return (
     <Nav>
-      <Li><NavLink to="blog">BLOG</NavLink></Li>
+      <Li><NavLink to="" state={{showBlog: true}}>BLOG</NavLink></Li>
       <Li><NavLink to="releases">RELEASES</NavLink></Li>
       <Li><ExtNavLink href="https://48ksps.bigcartel.com" target="_blank">STORE</ExtNavLink></Li>
       <Li><NavLink to="geofront">GEOFRONT</NavLink></Li>

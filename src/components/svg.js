@@ -5,8 +5,8 @@ const Drawbox = styled.svg`
   position: fixed;
   top: 0;
   left: 0;
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   fill: none;
   stroke: white;
   stroke-width: 1;
@@ -16,7 +16,9 @@ const Drawbox = styled.svg`
 export default function SVG (props) {
   return (
     <div>
-      <Drawbox>{props.children}</Drawbox>
+      <Drawbox>
+        {props.children}
+      </Drawbox>
     </div>
   )
 }

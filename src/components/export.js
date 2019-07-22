@@ -7,8 +7,8 @@ import ExtLink from "../components/extlink"
 import Navigation from "../components/navigation"
 import Bluebar from "../components/bluebar"
 import SVG from "../components/svg"
-// import Duotone from "../components/duotone"
 import BlogPost from "../components/blogpost"
+import BlogCarousel from "../components/blog-carousel"
 
 export {
   Wrapper,
@@ -17,6 +17,6 @@ export {
   Navigation,
   Bluebar,
   SVG,
-  // Duotone,
-  BlogPost
+  BlogPost,
+  BlogCarousel
 }
