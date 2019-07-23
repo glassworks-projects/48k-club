@@ -9,6 +9,8 @@ import Bluebar from "../components/bluebar"
 import SVG from "../components/svg"
 import BlogPost from "../components/blogpost"
 import BlogCarousel from "../components/blog-carousel"
+import ImgCarousel from "../components/img-carousel"
+import GFAbout from "../components/gf-about"
 
 export {
   Wrapper,
@@ -18,5 +20,7 @@ export {
   Bluebar,
   SVG,
   BlogPost,
-  BlogCarousel
+  BlogCarousel,
+  ImgCarousel,
+  GFAbout
 }

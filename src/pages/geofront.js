@@ -1,4 +1,5 @@
 import React from "react"
+import {Link} from "gatsby"
 import {Wrapper, InLink, ExtLink, Navigation, Bluebar} from "../components/export"
 import typography from "../utils/typography"
 import { TypographyStyle, GoogleFont } from 'react-typography'
@@ -27,7 +28,9 @@ export default class Geofront extends React.Component {
           <Scroll>
             <Navigation />
             <Poster style={{top: `650px`, left: `20%`}} src={gf_two} />
-            <Poster style={{top: `750px`, left: `55%`}} src={gf_three} />
+            <Link to="geofront-03">
+              <Poster style={{top: `750px`, left: `55%`}} src={gf_three} />
+            </Link>
             <Poster style={{top: `16%`, left: `18%`}} src={gf_zero} />
             <Poster style={{top: `30%`, left: `48%`}} src={gf_one} />
           </Scroll>
