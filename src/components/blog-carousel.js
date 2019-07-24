@@ -6,7 +6,7 @@ import {text, date} from "../text/lorem-ipsum.json"
 import sample from "../media/sample.jpg"
 import {BlogPost} from "../components/export"
 import {Carousel} from 'react-responsive-carousel'
-import styles from 'react-responsive-carousel/lib/styles/carousel.min.css'
+import '../styles/carousel.css'
 
 function str(t) {
   const items = []
@@ -20,8 +20,7 @@ export default function BlogCarousel () {
     // export default function BlogCarousel() {
       return (
         <Carousel showThumbs={false} showStatus={false}
-          useKeyboardArrows={true}
-        >
+          useKeyboardArrows={true} className="carousel">
           <div>
             <BlogPost date={date} img={sample}>{str(text)}</BlogPost>
           </div>

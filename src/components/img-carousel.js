@@ -11,7 +11,7 @@ const Crs = styled(Carousel)`
 `
 export default function ImgCarousel (props) {
   return (
-    <Crs showStatus={false} showThumbs={false} autoPlay={true} width="65vw" useKeyboardArrows={true}>
+    <Crs showStatus={false} showThumbs={false} autoPlay={true} width="60vw" useKeyboardArrows={true}>
       {props.children}
     </Crs>
   )

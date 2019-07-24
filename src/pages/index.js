@@ -24,6 +24,7 @@ const BlueLi = styled.li`
     text-decoration-color: blue;
   }
 `
+
 export default class Index extends React.Component {
 
   constructor(props) {
@@ -39,8 +40,9 @@ export default class Index extends React.Component {
 
   render() {
     return (
-      <Wrapper title="Home">
+      <Wrapper title="Home" blue={true} svg={true}>
         <body>
+          {/* <Blue /> */}
           <HomeNav>
             <BlueLi onClick={this.postLoad.bind(this)}>BLOG</BlueLi>
             {this.state.showBlog && <BlogCarousel />}
@@ -50,6 +52,7 @@ export default class Index extends React.Component {
             <li><InLink to="offpeak">OFF PEAK</InLink></li>
             <li><InLink to="about">ABOUT</InLink></li>
           </HomeNav>
+
           <SVG>
             <polygon points="0,2 1260,2 2,700" />
           </SVG>

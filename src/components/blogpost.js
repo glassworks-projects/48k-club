@@ -7,7 +7,6 @@ const Container = styled.div`
   border: 1px solid white;
   height: 350px;
   width: 75%;
-  background-color: black;
   margin: auto;
 `
 

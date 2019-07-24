@@ -12,6 +12,10 @@ import gf_three from "../media/posters/gf_three.png"
 const Poster = styled.img`
   position: absolute;
   width: 400px;
+  &:hover {
+    transform: scale(1.1);
+    transition: all .15s ease-in-out;
+  }
 `
 const Scroll = styled.div`
   height: 1200px;

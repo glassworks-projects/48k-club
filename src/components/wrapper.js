@@ -4,6 +4,7 @@
 */
 import {Link} from "gatsby"
 import logo from "../media/logo.png"
+import {SVG} from "../components/export"
 import React from "react"
 import styled from "styled-components"
 import typography from "../utils/typography"
@@ -18,8 +19,12 @@ const Wrap = styled.section`
   right:0;
   overflow: scroll;
   z-index:-1;
-  background-color: black;
+  ${props => props.blue ? ({
+    background: 'rgb(0,0,255)',
+    background: 'linear-gradient(0deg, rgba(0,0,255,1) 0%, rgba(0,0,0,1) 59%)'
+    }) : ({background:'black'})};
 `
+
 const Logo = styled.img`
   position: absolute;
   width: 135px;
@@ -34,7 +39,7 @@ function Title(props) {
 
 export default function Wrapper (props) {
   return (
-    <Wrap>
+    <Wrap blue={props.blue}>
       <head>
         <TypographyStyle typography={typography} />
         <GoogleFont typography={typography} />

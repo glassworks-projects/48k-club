@@ -15,6 +15,7 @@ const ReleaseNames = styled.ul`
   list-style: none;
   font-size: 2.5vw;
   line-height: 1.1em;
+  font-weight: 300;
 
   li {
     &:hover {
@@ -34,12 +35,14 @@ const ReleaseAbout = styled(Release)`
   height: 80%;
 
   h1 {
+    font-weight: 300;
     font-size: 3vw;
     text-align: center;
     padding-bottom: 2vh;
   }
 
   p {
+    font-weight: 300;
     font-size: 3.5vh;
     position: relative;
     padding-top: 1em;
