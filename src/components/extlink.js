@@ -8,7 +8,7 @@ const StyledLink = styled.a`
   cursor: inherit;
 
   &:hover {
-    font-family: ${props => props.serif ? 'Cormorant Garamond' : 'Roboto'};
+    font-family: ${props => props.serif ? 'Cormorant Garamond' : 'inherit'};
     font-weight: 500;
     text-decoration: underline;
     text-decoration-color: blue;
@@ -21,4 +21,8 @@ export default function ExtLink(props) {
       {props.children}
     </StyledLink>
   )
+}
+
+ExtLink.defaultProps = {
+  serif: true
 }

@@ -4,6 +4,7 @@ import typography from "../utils/typography"
 import { TypographyStyle, GoogleFont } from 'react-typography'
 import styled from "styled-components"
 import {Link} from "gatsby"
+import "../styles/global.css"
 
 const GF = styled.h1`
   color: white;

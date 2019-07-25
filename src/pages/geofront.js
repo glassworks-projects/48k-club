@@ -8,6 +8,7 @@ import gf_zero from "../media/posters/gf_zero.png"
 import gf_one from "../media/posters/gf_one.png"
 import gf_two from "../media/posters/gf_two.jpg"
 import gf_three from "../media/posters/gf_three.png"
+import "../styles/global.css"
 
 const Poster = styled.img`
   position: absolute;
@@ -26,7 +27,7 @@ const Scroll = styled.div`
 export default class Geofront extends React.Component {
   render () {
     return (
-      <Wrapper title="GeoFront">
+      <Wrapper title="GeoFront" blue={true}>
         <body>
           <Bluebar name="GEOFRONT" />
           <Scroll>

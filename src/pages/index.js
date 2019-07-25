@@ -3,6 +3,7 @@ import {Wrapper, InLink, ExtLink, SVG, BlogCarousel} from "../components/export"
 import typography from "../utils/typography"
 import { TypographyStyle, GoogleFont } from 'react-typography'
 import styled from "styled-components"
+import "../styles/global.css"
 
 const HomeNav = styled.ul`
   padding-top: 5%;
@@ -41,13 +42,14 @@ export default class Index extends React.Component {
   render() {
     return (
       <Wrapper title="Home" blue={true} svg={true}>
+        {/* <Layout> */}
         <body>
           {/* <Blue /> */}
           <HomeNav>
             <BlueLi onClick={this.postLoad.bind(this)}>BLOG</BlueLi>
             {this.state.showBlog && <BlogCarousel />}
             <li><InLink to="releases">RELEASES</InLink></li>
-            <li><ExtLink serif={true} href="https://48ksps.bigcartel.com">STORE</ExtLink></li>
+            <li><ExtLink href="https://48ksps.bigcartel.com">STORE</ExtLink></li>
             <li><InLink to="geofront">GEOFRONT</InLink></li>
             <li><InLink to="offpeak">OFF PEAK</InLink></li>
             <li><InLink to="about">ABOUT</InLink></li>
@@ -57,6 +59,8 @@ export default class Index extends React.Component {
             <polygon points="0,2 1260,2 2,700" />
           </SVG>
         </body>
+        {/* </Layout> */}
+
       </Wrapper>
     )
   }

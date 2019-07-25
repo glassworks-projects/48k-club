@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'Founders Grotesk Web';
+  font-style: normal;
+  src: url("../fonts/FoundersGroteskWeb-Regular.woff") format("woff"),
+  url("../fonts/FoundersGroteskWeb-Regular.woff2") format("woff2"),
+  url("../fonts/FoundersGroteskWeb-Regular.eot") format("eot");
+}
+
+* {
+  font-family: 'Founders Grotesk Web', normal;
+}

@@ -29,7 +29,6 @@ const NavLink = styled(Link)`
   cursor: inherit;
 
   &:hover {
-    font-style: italic;
     text-decoration: underline;
     text-decoration-color: blue;
   }
@@ -39,7 +38,6 @@ const ExtNavLink = styled.a`
   text-decoration: none;
 
   &:hover {
-    font-style: italic;
     text-decoration: underline;
     text-decoration-color: blue;
   }

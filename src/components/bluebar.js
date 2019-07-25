@@ -1,11 +1,11 @@
 /*
 * righthand blue bar that tells you where you are
 */
-
 import React from "react"
 import styled from "styled-components"
 import typography from "../utils/typography"
 import { TypographyStyle, GoogleFont } from 'react-typography'
+import "../styles/global.css"
 
 const Blue = styled.div`
   position: fixed;

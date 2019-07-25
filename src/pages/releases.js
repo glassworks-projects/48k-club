@@ -6,6 +6,7 @@ import st from "../media/album-artwork/st.jpg"
 import styled from "styled-components"
 import {Wrapper, Navigation, Bluebar, SVG, ExtLink} from "../components/export"
 import {releasetext} from "../text/release-about.json"
+import "../styles/global.css"
 
 const ReleaseNames = styled.ul`
   position: absolute;

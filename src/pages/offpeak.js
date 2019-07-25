@@ -4,6 +4,7 @@ import {ExtLink, Navigation, Bluebar, Wrapper} from "../components/export"
 import typography from "../utils/typography"
 import { TypographyStyle, GoogleFont } from 'react-typography'
 import styled from "styled-components"
+import "../styles/global.css"
 
 const Description = styled.div`
   padding: 20px;

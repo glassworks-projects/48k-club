@@ -33,7 +33,6 @@ const BodyText = styled.p`
   order: 3;
   font-size: 0.2em;
   text-align: justify;
-  font-family: 'Roboto';
   font-weight: 300;
   padding: 20px;
   overflow: scroll;
