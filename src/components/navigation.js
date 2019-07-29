@@ -9,18 +9,19 @@ const Nav = styled.ul`
   position: absolute;
   height: 70px;
   right: 0%;
+  font-size: 1.1em;
   padding-top: 20px;
-  padding-right: 10px;
+  padding-right: 20px;
   list-style: none;
   text-align: right;
   z-index: 1;
-  border-bottom: 0.1pt solid white;
-  background-color: black;
+  ${'' /* border-bottom: 1px solid blue; */}
+  ${'' /* background-color: black; */}
   width: 100%;
 `
 const Li = styled.li`
   display: inline-block;
-  padding: 10px;
+  padding: 10px 15px;
 `
 
 const NavLink = styled(Link)`
@@ -45,7 +46,7 @@ const ExtNavLink = styled.a`
 export default function Navigation () {
   return (
     <Nav>
-      <Li><NavLink to="" state={{showBlog: true}}>BLOG</NavLink></Li>
+      <Li><NavLink to="">BLOG</NavLink></Li>
       <Li><NavLink to="releases">RELEASES</NavLink></Li>
       <Li><ExtNavLink href="https://48ksps.bigcartel.com" target="_blank">STORE</ExtNavLink></Li>
       <Li><NavLink to="geofront">GEOFRONT</NavLink></Li>

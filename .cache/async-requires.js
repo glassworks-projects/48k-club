@@ -7,6 +7,7 @@ exports.components = {
   "component---src-pages-geofront-js": () => import("/Users/ryanglassman/code/48k-club/gatsby-site/src/pages/geofront.js" /* webpackChunkName: "component---src-pages-geofront-js" */),
   "component---src-pages-index-js": () => import("/Users/ryanglassman/code/48k-club/gatsby-site/src/pages/index.js" /* webpackChunkName: "component---src-pages-index-js" */),
   "component---src-pages-offpeak-js": () => import("/Users/ryanglassman/code/48k-club/gatsby-site/src/pages/offpeak.js" /* webpackChunkName: "component---src-pages-offpeak-js" */),
-  "component---src-pages-releases-js": () => import("/Users/ryanglassman/code/48k-club/gatsby-site/src/pages/releases.js" /* webpackChunkName: "component---src-pages-releases-js" */)
+  "component---src-pages-releases-js": () => import("/Users/ryanglassman/code/48k-club/gatsby-site/src/pages/releases.js" /* webpackChunkName: "component---src-pages-releases-js" */),
+  "component---src-pages-about-js": () => import("/Users/ryanglassman/code/48k-club/gatsby-site/src/pages/about.js" /* webpackChunkName: "component---src-pages-about-js" */)
 }
 

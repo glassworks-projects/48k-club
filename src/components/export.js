@@ -11,6 +11,7 @@ import BlogPost from "../components/blogpost"
 import BlogCarousel from "../components/blog-carousel"
 import ImgCarousel from "../components/img-carousel"
 import GFAbout from "../components/gf-about"
+import Socials from "../components/socials.js"
 
 export {
   Wrapper,
@@ -22,5 +23,6 @@ export {
   BlogPost,
   BlogCarousel,
   ImgCarousel,
-  GFAbout
+  GFAbout,
+  Socials
 }

@@ -18,11 +18,13 @@
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
     "react-responsive-carousel": "^3.1.49",
+    "react-spring": "^8.0.27",
     "styled-components": "^5.0.0-beta.6-ej4",
     "typescript": "^3.5.3"
   },
   "devDependencies": {
-    "prettier": "^1.18.2"
+    "prettier": "^1.18.2",
+    "react-social-icons": "^4.1.0"
   },
   "keywords": [
     "gatsby"

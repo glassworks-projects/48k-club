@@ -1,6 +1,6 @@
 import React from "react"
 import {text} from "../text/offpeak-about.json"
-import {ExtLink, Navigation, Bluebar, Wrapper} from "../components/export"
+import {ExtLink, Navigation, Bluebar, Wrapper, Socials} from "../components/export"
 import typography from "../utils/typography"
 import { TypographyStyle, GoogleFont } from 'react-typography'
 import styled from "styled-components"
@@ -36,6 +36,7 @@ export default function OffPeak () {
       <body>
         <Navigation />
         <Bluebar name="OFF PEAK"/>
+        <Socials color="blue" />
         <Description>{text}</Description>
         <Nav>
           <li>

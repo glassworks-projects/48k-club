@@ -10,6 +10,7 @@ exports.components = {
   "component---src-pages-geofront-js": hot(preferDefault(require("/Users/ryanglassman/code/48k-club/gatsby-site/src/pages/geofront.js"))),
   "component---src-pages-index-js": hot(preferDefault(require("/Users/ryanglassman/code/48k-club/gatsby-site/src/pages/index.js"))),
   "component---src-pages-offpeak-js": hot(preferDefault(require("/Users/ryanglassman/code/48k-club/gatsby-site/src/pages/offpeak.js"))),
-  "component---src-pages-releases-js": hot(preferDefault(require("/Users/ryanglassman/code/48k-club/gatsby-site/src/pages/releases.js")))
+  "component---src-pages-releases-js": hot(preferDefault(require("/Users/ryanglassman/code/48k-club/gatsby-site/src/pages/releases.js"))),
+  "component---src-pages-about-js": hot(preferDefault(require("/Users/ryanglassman/code/48k-club/gatsby-site/src/pages/about.js")))
 }
 

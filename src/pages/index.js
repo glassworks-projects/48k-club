@@ -1,5 +1,5 @@
 import React from "react"
-import {Wrapper, InLink, ExtLink, SVG, BlogCarousel} from "../components/export"
+import {Wrapper, InLink, ExtLink, SVG, BlogCarousel, Socials} from "../components/export"
 import typography from "../utils/typography"
 import { TypographyStyle, GoogleFont } from 'react-typography'
 import styled from "styled-components"
@@ -54,6 +54,8 @@ export default class Index extends React.Component {
             <li><InLink to="offpeak">OFF PEAK</InLink></li>
             <li><InLink to="about">ABOUT</InLink></li>
           </HomeNav>
+          <br />
+          <Socials color="black"/>
 
           <SVG>
             <polygon points="0,2 1260,2 2,700" />
