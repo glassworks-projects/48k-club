@@ -27,6 +27,7 @@ const Nav = styled.ul`
   text-align: center;
   list-style: none;
   width: 1000px;
+  padding-top: 1em;
 `
 
 export default function OffPeak () {
@@ -39,6 +40,11 @@ export default function OffPeak () {
         <Socials color="blue" />
         <Description>{text}</Description>
         <Nav>
+          <li>
+            <ExtLink href="https://weareinsert.com/textual/off-peak-free-at-last/">
+              006: FREE AT LAST
+            </ExtLink>
+          </li>
           <li>
             <ExtLink href="https://weareinsert.com/textual/off-peak-tomas-fraser/">
               005: TOMAS FRASER

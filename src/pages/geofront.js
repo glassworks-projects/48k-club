@@ -10,9 +10,15 @@ import styled from "styled-components"
 // import gf_three from "../media/posters/gf_three.png"
 import "../styles/global.css"
 import { useSpring, animated } from 'react-spring'
-import first from "../media/posters/three-layers/first.png"
-import second from "../media/posters/three-layers/second.png"
-import third from "../media/posters/three-layers/third.png"
+import first00 from "../media/posters/zero-layers/first00.png"
+import second00 from "../media/posters/zero-layers/second00.png"
+import third00 from "../media/posters/zero-layers/third00.png"
+import first03 from "../media/posters/three-layers/first03.png"
+import second03 from "../media/posters/three-layers/second03.png"
+import third03 from "../media/posters/three-layers/third03.png"
+import first02 from "../media/posters/two-layers/first02.png"
+import second02 from "../media/posters/two-layers/second02.png"
+import third02 from "../media/posters/two-layers/third02.png"
 
 // const Poster = styled.img`
 //   position: absolute;
@@ -37,8 +43,10 @@ export default class Geofront extends React.Component {
           <Socials color="black" sidebar={true}/>
           <Scroll>
             <Navigation />
+            <Poster first={first02} second={second02} third={third02} top={200} left={450} />
+            <Poster first={first00} second={second00} third={third00} top={100} left={0} />
             <Link to="geofront-03">
-              <Poster first={first} second={second} third={third} />
+              <Poster first={first03} second={second03} third={third03} top={750} left={600}/>
             </Link>
             {/* <Poster style={{top: `650px`, left: `20%`}} src={gf_two} />
               <Link to="geofront-03">
