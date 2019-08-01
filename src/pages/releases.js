@@ -9,6 +9,8 @@ const Titles = styled.div`
   font-size: 4.5em;
   padding-top: 20vh;
   display: block;
+  width: 80%;
+  ${'' /* background-color: red; */}
 `
 
 const Entry = styled.p`
@@ -21,6 +23,11 @@ const Entry = styled.p`
   }
 `
 
+const L = styled(Link)`
+  text-decoration: inherit;
+  color:inherit;
+`
+
 export default class Releases extends React.Component {
   render () {
     return (
@@ -30,10 +37,10 @@ export default class Releases extends React.Component {
           <Bluebar name="RELEASES" />
           <Socials color="black" />
           <Titles>
-            <Entry left="20vw">FORMLESS</Entry>
-            <Entry left="35vw">SCREAM TAPE</Entry>
-            <Entry left="24vw">LAPSE (MIRACLES RMX)</Entry>
-            <Entry left="33vw">CATHEDRAL</Entry>
+            <L to="formless"><Entry left="2vw">FORMLESS</Entry></L>
+            <L to="screamtape"><Entry left="4vw">SCREAM TAPE</Entry></L>
+            <L to="lapse"><Entry left="10vw">LAPSE (MIRACLES RMX)</Entry></L>
+            <L to="cathedral"><Entry left="8vw">CATHEDRAL</Entry></L>
           </Titles>
         </body>
       </Wrapper>

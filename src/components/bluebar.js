@@ -7,6 +7,7 @@ import typography from "../utils/typography"
 import { TypographyStyle, GoogleFont } from 'react-typography'
 import "../styles/global.css"
 
+
 const Blue = styled.div`
   position: fixed;
   right: 0;
@@ -18,7 +19,7 @@ const Blue = styled.div`
 const PageTitle = styled.div`
   position: absolute;
   text-align: right;
-  left: 87%;
+  right: -80px;
   top: 30%;
   width: 250px;
   z-index: 0;

@@ -13,6 +13,7 @@ import ImgCarousel from "../components/img-carousel"
 import GFAbout from "../components/gf-about"
 import Socials from "../components/socials"
 import Poster from "../components/parallax-poster"
+import Release from "../components/release-about"
 
 export {
   Wrapper,
@@ -26,5 +27,6 @@ export {
   ImgCarousel,
   GFAbout,
   Socials,
-  Poster
+  Poster,
+  Release
 }
