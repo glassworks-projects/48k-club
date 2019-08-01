@@ -10,6 +10,11 @@ const HomeNav = styled.ul`
   font-size: 7em;
   text-align: center;
   list-style: none;
+  @media screen and (max-width: 600px) {
+    padding-top: 12%;
+    font-size: 3.5em;
+    line-height: 1.4em;
+  }
 `
 
 const BlueLi = styled.li`

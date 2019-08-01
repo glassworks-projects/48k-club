@@ -16,6 +16,9 @@ const BigDate = styled.h1`
   font-weight: 600;
   font-style: italic;
   font-size: 5em;
+  @media screen and (max-width: 600px) {
+    font-size: 3em;
+  }
 `
 
 const Thumb = styled.img`
@@ -26,6 +29,9 @@ const Thumb = styled.img`
   min-width: 25%;
   height: 100%;
   ${'' /* padding: 10px; */}
+  @media screen and (max-width: 600px) {
+    min-width: 0%;
+  }
 `
 
 const BodyText = styled.p`
@@ -36,6 +42,11 @@ const BodyText = styled.p`
   font-weight: 300;
   padding: 20px;
   overflow: scroll;
+  @media screen and (max-width: 600px) {
+    line-height: 1em;
+    font-size: 0.3em;
+    padding: 10px;
+  }
 `
 
 const Line = styled.div`

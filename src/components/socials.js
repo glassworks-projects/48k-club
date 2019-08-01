@@ -3,18 +3,20 @@ import { SocialIcon } from 'react-social-icons';
 import styled from "styled-components"
 
 const SocFooter = styled.div`
-  list-style: none;
   text-align: center;
   position: fixed;
   transform: rotate(-90deg);
   right: -3%;
   bottom: 5vw;
+  @media screen and (max-width: 600px) {
+    position: relative;
+    transform: none;
+    width: 50%;
+    left: 25%;
+    bottom: 5%;
+  }
 `
 
-const Li = styled.li`
-  display: inline-block;
-  padding: 10px;
-`
 function Icon (props) {
   return(
     <SocialIcon url={props.url} bgColor="transparent" fgColor={props.color}

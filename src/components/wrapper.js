@@ -30,6 +30,9 @@ const Logo = styled.img`
   width: 135px;
   padding: 20px;
   z-index: 2;
+  @media screen and (max-width: 600px) {
+    width: 100px;
+  }
 `
 function Title(props) {
   return (
