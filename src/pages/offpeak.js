@@ -43,56 +43,83 @@ const Container = styled.div`
   padding-top: 20vh;
   width: 80vw;
   margin: 0 auto;
+  @media screen and (max-width: 600px) {
+    padding-top: 15vh;
+  }
 `
 const LI = styled.li`
-  @media screen and (max-width: 650px) {
+  @media screen and (max-width: 600px) {
     padding: 1vh 0;
   }
 `
-export default function OffPeak () {
+export default class OffPeak extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      width: 0,
+      height: 0
+    }
+    this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+  }
 
-  return (
-    <Wrapper title="Off Peak">
-      <body>
-        <Navigation />
-        <Bluebar name="OFF PEAK"/>
-        <Socials color="blue" />
-        <Container>
-          <Description>{text}</Description>
-          <Nav>
-            <LI>
-              <ExtLink href="https://weareinsert.com/textual/off-peak-free-at-last/">
-                006: FREE AT LAST
-              </ExtLink>
-            </LI>
-            <LI>
-              <ExtLink href="https://weareinsert.com/textual/off-peak-tomas-fraser/">
-                005: TOMAS FRASER
-              </ExtLink>
-            </LI>
-            <LI>
-              <ExtLink href="https://weareinsert.com/textual/off-peak-bbylu/">
-                004: BBYLU
-              </ExtLink>
-            </LI>
-            <LI>
-              <ExtLink href="https://weareinsert.com/textual/off-peak-spurz/">
-                003: SPURZ
-              </ExtLink>
-            </LI>
-            <LI>
-              <ExtLink href="https://weareinsert.com/textual/off-peak-jsport/">
-                002: JSPORT
-              </ExtLink>
-            </LI>
-            <LI>
-              <ExtLink href="https://weareinsert.com/textual/off-peak-qrtr/">
-                001: QRTR
-              </ExtLink>
-            </LI>
-          </Nav>
-        </Container>
-      </body>
-    </Wrapper>
-  )
+  componentDidMount() {
+    this.updateWindowDimensions();
+    window.addEventListener('resize', this.updateWindowDimensions);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateWindowDimensions);
+  }
+
+  updateWindowDimensions() {
+    this.setState({ width: window.innerWidth, height: window.innerHeight });
+  }
+
+  render () {
+    return (
+      <Wrapper title="Off Peak">
+        <body>
+          <Navigation />
+          <Bluebar name="OFF PEAK"/>
+          <Socials color="blue" />
+          <Container>
+            <Description>{text}</Description>
+            <Nav>
+              <LI>
+                <ExtLink href="https://weareinsert.com/textual/off-peak-free-at-last/">
+                  006: FREE AT LAST
+                </ExtLink>
+              </LI>
+              <LI>
+                <ExtLink href="https://weareinsert.com/textual/off-peak-tomas-fraser/">
+                  005: TOMAS FRASER
+                </ExtLink>
+              </LI>
+              <LI>
+                <ExtLink href="https://weareinsert.com/textual/off-peak-bbylu/">
+                  004: BBYLU
+                </ExtLink>
+              </LI>
+              <LI>
+                <ExtLink href="https://weareinsert.com/textual/off-peak-spurz/">
+                  003: SPURZ
+                </ExtLink>
+              </LI>
+              <LI>
+                <ExtLink href="https://weareinsert.com/textual/off-peak-jsport/">
+                  002: JSPORT
+                </ExtLink>
+              </LI>
+              <LI>
+                <ExtLink href="https://weareinsert.com/textual/off-peak-qrtr/">
+                  001: QRTR
+                </ExtLink>
+              </LI>
+            </Nav>
+          </Container>
+        </body>
+      </Wrapper>
+    )
+  }
+
 }

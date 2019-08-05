@@ -19,21 +19,22 @@ const Cover = styled.img`
 
 const Container = styled.div`
   position: absolute;
-  top: 55%;
+  top: 20vh;
   display: flex;
   height: 70vh;
-  margin-top: -35vh;
+  ${'' /* margin-top: -35vh; */}
   width: 100%;
   align-items: center;
   @media screen and (max-width: 600px) {
     flex-direction: column;
+    top: 12vh;
   }
 `
 
 const Textbox = styled.div`
   height: inherit;
   padding-top: 1vh;
-  width: 40vw;
+  width: 45vw;
   @media screen and (max-width: 600px) {
     width: 80vw;
     text-align: center;
@@ -44,6 +45,12 @@ const textPadding = "2vw";
 const H1 = styled.h1`
   padding-left: ${textPadding};
   font-size: 2.5em;
+  @media screen and (max-width: 600px) {
+    font-size: 2em;
+  }
+  @media screen and (max-height: 500px) {
+    font-size: 2em;
+  }
 `
 const H2 = styled.h2`
   padding-left: ${textPadding};

@@ -25,23 +25,91 @@ const Scroll = styled.div`
   margin: 0 auto;
   overflow-y: scroll;
 `
+const IMG = styled.img`
+  width: 75vw;
+  display: block;
+  margin: 0 auto;
+  padding: 2vh 0;
+  @media screen and (max-height: 500px) {
+    width: 40vw;
+  }
+`
+const Container = styled.div`
+  padding-top: 10vh;
+  @media screen and (max-height: 500px) {
+    padding-top: 12vh;
+  }
+`
+function Floats() {
+  return (
+    <div>
+      <Scroll>
+        <Link to="geofront-02">
+          <Poster first={first02} second={second02} third={third02} top={200} left={450} />
+        </Link>
+        <Link to="geofront-00">
+          <Poster first={first00} second={second00} third={third00} top={100} left={0} />
+        </Link>
+        <Link to="geofront-03">
+          <Poster first={first03} second={second03} third={third03} top={750} left={600}/>
+        </Link>
+        <Link to="geofront-01">
+          <Poster first={first01} second={second01} third={third01} top={800} left={10}/>
+        </Link>
+      </Scroll>
+    </div>
+  )
+}
+
+function Static() {
+  return (
+    <Container>
+      <Link to="geofront-03">
+        <IMG src={require("../media/posters/gf_three.png")} />
+      </Link>
+      <Link to="geofront-02">
+        <IMG src={require("../media/posters/gf_two.jpg")} />
+      </Link>
+      <Link to="geofront-01">
+        <IMG src={require("../media/posters/gf_one.png")} />
+      </Link>
+      <Link to="geofront-00">
+        <IMG src={require("../media/posters/gf_zero.png")} />
+      </Link>
+    </Container>
+  )
+}
 
 export default class Geofront extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      width: 0,
+      height: 0
+    }
+    this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+  }
+
+  componentDidMount() {
+    this.updateWindowDimensions();
+    window.addEventListener('resize', this.updateWindowDimensions);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateWindowDimensions);
+  }
+
+  updateWindowDimensions() {
+    this.setState({ width: window.innerWidth, height: window.innerHeight });
+  }
   render () {
     return (
       <Wrapper title="GeoFront" blue={true}>
         <body>
           <Bluebar name="GEOFRONT"/>
           <Socials color="black"/>
-          <Scroll>
-            <Navigation />
-            <Poster first={first02} second={second02} third={third02} top={200} left={450} />
-            <Poster first={first00} second={second00} third={third00} top={100} left={0} />
-            <Link to="geofront-03">
-              <Poster first={first03} second={second03} third={third03} top={750} left={600}/>
-            </Link>
-            <Poster first={first01} second={second01} third={third01} top={800} left={10}/>
-          </Scroll>
+          <Navigation />
+          {(window.innerWidth < 600 || window.innerHeight < 500) ? <Static /> :  <Floats />}
         </body>
 
       </Wrapper>

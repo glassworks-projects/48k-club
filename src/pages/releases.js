@@ -36,6 +36,29 @@ const L = styled(Link)`
 `
 
 export default class Releases extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      width: 0,
+      height: 0
+    }
+    this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+  }
+
+  componentDidMount() {
+    this.updateWindowDimensions();
+    window.addEventListener('resize', this.updateWindowDimensions);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateWindowDimensions);
+  }
+
+  updateWindowDimensions() {
+    this.setState({ width: window.innerWidth, height: window.innerHeight });
+  }
+
   render () {
     return (
       <Wrapper title="Releases" blue={true}>
@@ -44,10 +67,10 @@ export default class Releases extends React.Component {
           <Bluebar name="RELEASES" />
 
           <Titles>
-            <L to="formless"><Entry left="2vw"><span>FORMLESS</span></Entry></L>
-            <L to="screamtape"><Entry left="4vw">SCREAM TAPE</Entry></L>
-            <L to="lapse"><Entry left="10vw">LAPSE (MIRACLES RMX)</Entry></L>
-            <L to="cathedral"><Entry left="8vw">CATHEDRAL</Entry></L>
+            <L to="formless"><Entry left={(window.innerWidth > 600) ? "2vw" : "0vw"}><span>FORMLESS</span></Entry></L>
+            <L to="screamtape"><Entry left={(window.innerWidth > 600) ? "4vw" : "0vw"}>SCREAM TAPE</Entry></L>
+            <L to="lapse"><Entry left={(window.innerWidth > 600) ? "10vw" : "0vw"}>LAPSE (MIRACLES RMX)</Entry></L>
+            <L to="cathedral"><Entry left={(window.innerWidth > 600) ? "8vw" : "0vw"}>CATHEDRAL</Entry></L>
           </Titles>
           <Socials color="black" />
         </body>

@@ -16,8 +16,6 @@ const Nav = styled.ul`
   list-style: none;
   text-align: right;
   z-index: 1;
-  ${'' /* border-bottom: 1px solid blue; */}
-  ${'' /* background-color: black; */}
   width: 100%;
 `
 const Li = styled.li`
@@ -28,6 +26,10 @@ const Li = styled.li`
     list-style: none;
     padding: auto;
   }
+`
+const BurgerLi = styled.li`
+  list-style: none;
+  padding: 8px 0;
 `
 
 const NavLink = styled(Link)`
@@ -55,7 +57,7 @@ var styles = {
     position: 'absolute',
     width: '30px',
     height: '20px',
-    right: '20px',
+    left: '20px',
     top: '20px'
   },
   bmBurgerBars: {
@@ -79,7 +81,8 @@ var styles = {
     background: 'black',
     fontSize: '2em',
     lineHeight: `1.2em`,
-    textAlign: 'center'
+    textAlign: 'center',
+    border: '1px solid blue'
   },
   bmMorphShape: {
     fill: '#373a47'
@@ -89,26 +92,34 @@ var styles = {
     padding: '0.8em'
   },
   bmItem: {
-    display: 'inline-block'
+    listStyle: 'none'
   },
   bmOverlay: {
     background: 'rgba(0, 0, 0, 0.3)'
   }
 }
 
+function Ham() {
+  return (
+    <Menu styles={styles} width="100%">
+      <ul>
+        <BurgerLi><NavLink to="">BLOG</NavLink></BurgerLi>
+        <BurgerLi><NavLink to="releases">RELEASES</NavLink></BurgerLi>
+        <BurgerLi>
+          <ExtNavLink href="https://48ksps.bigcartel.com" target="_blank">STORE</ExtNavLink>
+        </BurgerLi>
+        <BurgerLi><NavLink to="geofront">GEOFRONT</NavLink></BurgerLi>
+        <BurgerLi><NavLink to="offpeak">OFF PEAK</NavLink></BurgerLi>
+        <BurgerLi><NavLink to="about">ABOUT</NavLink></BurgerLi>
+      </ul>
+    </Menu>
+  )
+}
+
 export default function Navigation () {
   return (
   (window.innerWidth < 600 || window.innerHeight < 500) ?
-    <Menu right styles={styles} width={"100%"}>
-      <ul>
-        <Li><NavLink to="">BLOG</NavLink></Li>
-        <Li><NavLink to="releases">RELEASES</NavLink></Li>
-        <Li><ExtNavLink href="https://48ksps.bigcartel.com" target="_blank">STORE</ExtNavLink></Li>
-        <Li><NavLink to="geofront">GEOFRONT</NavLink></Li>
-        <Li><NavLink to="offpeak">OFF PEAK</NavLink></Li>
-        <Li><NavLink to="about">ABOUT</NavLink></Li>
-      </ul>
-    </Menu>
+    <Ham />
     :
     <Nav>
       <Li><NavLink to="">BLOG</NavLink></Li>

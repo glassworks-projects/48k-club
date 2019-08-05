@@ -12,6 +12,9 @@ exports.components = {
   "component---src-pages-lapse-js": () => import("/Users/ryanglassman/code/48k-club/gatsby-site/src/pages/lapse.js" /* webpackChunkName: "component---src-pages-lapse-js" */),
   "component---src-pages-offpeak-js": () => import("/Users/ryanglassman/code/48k-club/gatsby-site/src/pages/offpeak.js" /* webpackChunkName: "component---src-pages-offpeak-js" */),
   "component---src-pages-releases-js": () => import("/Users/ryanglassman/code/48k-club/gatsby-site/src/pages/releases.js" /* webpackChunkName: "component---src-pages-releases-js" */),
-  "component---src-pages-screamtape-js": () => import("/Users/ryanglassman/code/48k-club/gatsby-site/src/pages/screamtape.js" /* webpackChunkName: "component---src-pages-screamtape-js" */)
+  "component---src-pages-screamtape-js": () => import("/Users/ryanglassman/code/48k-club/gatsby-site/src/pages/screamtape.js" /* webpackChunkName: "component---src-pages-screamtape-js" */),
+  "component---src-pages-geofront-02-js": () => import("/Users/ryanglassman/code/48k-club/gatsby-site/src/pages/geofront-02.js" /* webpackChunkName: "component---src-pages-geofront-02-js" */),
+  "component---src-pages-geofront-01-js": () => import("/Users/ryanglassman/code/48k-club/gatsby-site/src/pages/geofront-01.js" /* webpackChunkName: "component---src-pages-geofront-01-js" */),
+  "component---src-pages-geofront-00-js": () => import("/Users/ryanglassman/code/48k-club/gatsby-site/src/pages/geofront-00.js" /* webpackChunkName: "component---src-pages-geofront-00-js" */)
 }
 

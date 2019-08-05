@@ -21,7 +21,7 @@ const GF = styled.h1`
     text-decoration-color: blue;
   }
   @media screen and (max-width: 600px) {
-    top: 0vh;
+    top: -1vh;
   }
 `
 
@@ -34,7 +34,7 @@ const Num = styled.h1`
   right: 5vw;
   @media screen and (max-width: 600px) {
     bottom: auto;
-    top: 22vh;
+    top: 20vh;
   }
 `
 
@@ -47,7 +47,7 @@ const BodyText = styled.div`
     order: 2;
     text-align: center;
     font-size: 1.2em;
-    width: 90vw;
+    width: 85vw;
     padding-top: 2vh;
   }
   @media screen and (max-height: 500px) {
@@ -67,6 +67,7 @@ const Container = styled.div`
   width: 100vw;
   justify-content: space-around;
   @media screen and (max-width: 600px) {
+    top: 12vh;
     flex-direction: column;
     justify-content: auto;
   }

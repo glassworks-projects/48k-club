@@ -25,13 +25,21 @@ const Wrap = styled.section`
     }) : ({background:'black'})};
 `
 
-const Logo = styled.img`
+// const Logo = styled.img`
+//
+// `
+const Logo = styled(Link)`
   position: absolute;
   width: 135px;
   padding: 20px;
   z-index: 2;
   @media screen and (max-width: 600px) {
-    width: 100px;
+    width: 30%;
+    left: 35%;
+  }
+  @media screen and (max-height: 500px) {
+    width: 14%;
+    left: 43%;
   }
 `
 function Title(props) {
@@ -48,9 +56,9 @@ export default function Wrapper (props) {
         <GoogleFont typography={typography} />
         <Title title={props.title}/>
       </head>
-      <Link to="" style={{cursor: `inherit`}}>
-        <Logo src={logo} />
-      </Link>
+      <Logo to="" style={{cursor: `inherit`}}>
+        <img src={logo}  />
+      </Logo>
       {props.children}
     </Wrap>
   )

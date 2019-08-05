@@ -9,13 +9,16 @@ const Crs = styled(Carousel)`
   right: 5vw; */}
   z-index: 0;
 `
+
 export default function ImgCarousel (props) {
   return (
     <Crs showStatus={false}
       showThumbs={false}
       autoPlay={true}
+      showIndicators={false}
       width={(window.innerWidth > 600) ? "60vw" : "90vw"}
-      useKeyboardArrows={true}>
+      useKeyboardArrows={true}
+    >
       {props.children}
     </Crs>
   )

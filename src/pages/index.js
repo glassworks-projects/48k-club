@@ -11,9 +11,12 @@ const HomeNav = styled.ul`
   text-align: center;
   list-style: none;
   @media screen and (max-width: 600px) {
-    padding-top: 12%;
+    padding-top: 20%;
     font-size: 3.5em;
-    line-height: 1.4em;
+  }
+  @media screen and (max-height: 500px) {
+    padding-top: 12%;
+    font-size: 4em;
   }
 `
 
@@ -36,8 +39,24 @@ export default class Index extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      showBlog : false
+      showBlog : false,
+      width: 0,
+      height: 0
     }
+    this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+  }
+
+  componentDidMount() {
+    this.updateWindowDimensions();
+    window.addEventListener('resize', this.updateWindowDimensions);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateWindowDimensions);
+  }
+
+  updateWindowDimensions() {
+    this.setState({ width: window.innerWidth, height: window.innerHeight });
   }
 
   postLoad() {

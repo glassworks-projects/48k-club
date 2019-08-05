@@ -15,6 +15,9 @@ exports.components = {
   "component---src-pages-lapse-js": hot(preferDefault(require("/Users/ryanglassman/code/48k-club/gatsby-site/src/pages/lapse.js"))),
   "component---src-pages-offpeak-js": hot(preferDefault(require("/Users/ryanglassman/code/48k-club/gatsby-site/src/pages/offpeak.js"))),
   "component---src-pages-releases-js": hot(preferDefault(require("/Users/ryanglassman/code/48k-club/gatsby-site/src/pages/releases.js"))),
-  "component---src-pages-screamtape-js": hot(preferDefault(require("/Users/ryanglassman/code/48k-club/gatsby-site/src/pages/screamtape.js")))
+  "component---src-pages-screamtape-js": hot(preferDefault(require("/Users/ryanglassman/code/48k-club/gatsby-site/src/pages/screamtape.js"))),
+  "component---src-pages-geofront-02-js": hot(preferDefault(require("/Users/ryanglassman/code/48k-club/gatsby-site/src/pages/geofront-02.js"))),
+  "component---src-pages-geofront-01-js": hot(preferDefault(require("/Users/ryanglassman/code/48k-club/gatsby-site/src/pages/geofront-01.js"))),
+  "component---src-pages-geofront-00-js": hot(preferDefault(require("/Users/ryanglassman/code/48k-club/gatsby-site/src/pages/geofront-00.js")))
 }
 
