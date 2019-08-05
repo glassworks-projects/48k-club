@@ -11,15 +11,22 @@ const Titles = styled.div`
   display: block;
   width: 80%;
   ${'' /* background-color: red; */}
+  @media screen and (max-width: 600px) {
+    font-size: 2.3em;
+    line-height: 1.2em;
+  }
 `
 
 const Entry = styled.p`
   position: relative;
-  left: ${props => props.left};
   width: fit-content;
+  left: ${props => props.left};
   cursor: inherit;
   &:hover {
     background-image: linear-gradient(0deg, rgba(0,0,255,1) 0%, rgba(0,0,255,1) 50%);
+  }
+  @media screen and (max-width: 600px) {
+    max-width: 87%;
   }
 `
 
@@ -35,13 +42,14 @@ export default class Releases extends React.Component {
         <body>
           <Navigation />
           <Bluebar name="RELEASES" />
-          <Socials color="black" />
+
           <Titles>
-            <L to="formless"><Entry left="2vw">FORMLESS</Entry></L>
+            <L to="formless"><Entry left="2vw"><span>FORMLESS</span></Entry></L>
             <L to="screamtape"><Entry left="4vw">SCREAM TAPE</Entry></L>
             <L to="lapse"><Entry left="10vw">LAPSE (MIRACLES RMX)</Entry></L>
             <L to="cathedral"><Entry left="8vw">CATHEDRAL</Entry></L>
           </Titles>
+          <Socials color="black" />
         </body>
       </Wrapper>
     )

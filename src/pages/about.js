@@ -16,6 +16,12 @@ const BodyText = styled.div`
   font-style: normal;
   font-weight: 400;
   font-size: 2em;
+  @media screen and (max-width: 600px) {
+    width: 80%;
+    left: 10%;
+    top: 30%;
+    font-size: 1.7em;
+  }
 `
 const Mail = styled.a`
   font: inherit;

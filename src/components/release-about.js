@@ -9,6 +9,12 @@ const Cover = styled.img`
   height: inherit;
   align-self: flex-start;
   margin-left: 8vw;
+  @media screen and (max-width: 600px) {
+    align-self: center;
+    max-width: 80vw;
+    margin: auto;
+    margin-bottom: 5vh;
+  }
 `
 
 const Container = styled.div`
@@ -19,12 +25,19 @@ const Container = styled.div`
   margin-top: -35vh;
   width: 100%;
   align-items: center;
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+  }
 `
 
 const Textbox = styled.div`
   height: inherit;
   padding-top: 1vh;
-  width: 50vw;
+  width: 40vw;
+  @media screen and (max-width: 600px) {
+    width: 80vw;
+    text-align: center;
+  }
 `
 const textPadding = "2vw";
 
@@ -49,6 +62,9 @@ const SVG = styled.svg`
   height: 5vh;
   stroke: white;
   stroke-width: 1;
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
 `
 const Btn = styled.a`
   padding-left: ${textPadding};
@@ -74,12 +90,22 @@ const L = styled(Link)`
   }
 `
 
+// const RelNav = styled.div`
+//   height: inherit;
+//   padding-top: 1vh;
+//   width: 30vw;
+// `
+
+const UL = styled.ul`
+  text-align: right;
+  list-style: none;
+`
+
 export default function Release (props) {
   return(
     <Wrapper title={props.title}>
       <body>
         <Navigation />
-        <Socials color="blue"/>
         <Container>
           <Cover src={props.img} />
           <Textbox>
@@ -94,7 +120,17 @@ export default function Release (props) {
             <div>{props.anythingElse}</div>
             <Btn href={props.href} target="_blank">Stream / Buy</Btn> <br/>
           </Textbox>
+          {/* <RelNav>
+            <H2>Other releases:</H2>
+            <UL>
+              <li>one</li>
+              <li>two</li>
+              <li>three</li>
+            </UL>
+          </RelNav> */}
+          <Socials color="blue"/>
         </Container>
+
       </body>
     </Wrapper>
   )

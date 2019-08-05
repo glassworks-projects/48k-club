@@ -7,29 +7,48 @@ import styled from "styled-components"
 import "../styles/global.css"
 
 const Description = styled.div`
-  padding: 20px;
-  position: absolute;
-  top: 25%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  width: 45vw;
   font-size: 1.5em;
   text-align: center;
   font-family: Cormorant Garamond;
   font-weight: 400;
+  @media screen and (max-width: 650px) {
+    width: 80vw;
+  }
 `
 
 const Nav = styled.ul`
-  position: absolute;
+  ${'' /* position: absolute;
   left: 50%;
-  top: 75%;
+  top: 75%; */}
   font-size: 5em;
-  transform: translate(-50%, -50%);
+  ${'' /* transform: translate(-50%, -50%); */}
   text-align: center;
   list-style: none;
-  width: 1000px;
+  width: 80vw;
   padding-top: 1em;
-`
+  @media screen and (max-width: 650px) {
+    font-size: 2em;
+  }
+  @media screen and (max-height: 500px) {
+    padding-top: 0.2em;
+    font-size: 4em;
+  }
 
+`
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20vh;
+  width: 80vw;
+  margin: 0 auto;
+`
+const LI = styled.li`
+  @media screen and (max-width: 650px) {
+    padding: 1vh 0;
+  }
+`
 export default function OffPeak () {
 
   return (
@@ -38,39 +57,41 @@ export default function OffPeak () {
         <Navigation />
         <Bluebar name="OFF PEAK"/>
         <Socials color="blue" />
-        <Description>{text}</Description>
-        <Nav>
-          <li>
-            <ExtLink href="https://weareinsert.com/textual/off-peak-free-at-last/">
-              006: FREE AT LAST
-            </ExtLink>
-          </li>
-          <li>
-            <ExtLink href="https://weareinsert.com/textual/off-peak-tomas-fraser/">
-              005: TOMAS FRASER
-            </ExtLink>
-          </li>
-          <li>
-            <ExtLink href="https://weareinsert.com/textual/off-peak-bbylu/">
-              004: BBYLU
-            </ExtLink>
-          </li>
-          <li>
-            <ExtLink href="https://weareinsert.com/textual/off-peak-spurz/">
-              003: SPURZ
-            </ExtLink>
-          </li>
-          <li>
-            <ExtLink href="https://weareinsert.com/textual/off-peak-jsport/">
-              002: JSPORT
-            </ExtLink>
-          </li>
-          <li>
-            <ExtLink href="https://weareinsert.com/textual/off-peak-qrtr/">
-              001: QRTR
-            </ExtLink>
-          </li>
-        </Nav>
+        <Container>
+          <Description>{text}</Description>
+          <Nav>
+            <LI>
+              <ExtLink href="https://weareinsert.com/textual/off-peak-free-at-last/">
+                006: FREE AT LAST
+              </ExtLink>
+            </LI>
+            <LI>
+              <ExtLink href="https://weareinsert.com/textual/off-peak-tomas-fraser/">
+                005: TOMAS FRASER
+              </ExtLink>
+            </LI>
+            <LI>
+              <ExtLink href="https://weareinsert.com/textual/off-peak-bbylu/">
+                004: BBYLU
+              </ExtLink>
+            </LI>
+            <LI>
+              <ExtLink href="https://weareinsert.com/textual/off-peak-spurz/">
+                003: SPURZ
+              </ExtLink>
+            </LI>
+            <LI>
+              <ExtLink href="https://weareinsert.com/textual/off-peak-jsport/">
+                002: JSPORT
+              </ExtLink>
+            </LI>
+            <LI>
+              <ExtLink href="https://weareinsert.com/textual/off-peak-qrtr/">
+                001: QRTR
+              </ExtLink>
+            </LI>
+          </Nav>
+        </Container>
       </body>
     </Wrapper>
   )

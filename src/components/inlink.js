@@ -9,8 +9,8 @@ const StyledLink = styled(Link)`
   cursor: inherit;
 
   &:hover {
-    font-family: 'Cormorant Garamond';
-    font-weight: 500;
+    ${'' /* font-family: 'Cormorant Garamond';
+    font-weight: 500; */}
     text-decoration: underline;
     text-decoration-color: blue;
   }

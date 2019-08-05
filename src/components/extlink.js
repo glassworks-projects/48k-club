@@ -8,8 +8,8 @@ const StyledLink = styled.a`
   cursor: inherit;
 
   &:hover {
-    font-family: ${props => props.serif ? 'Cormorant Garamond' : 'inherit'};
-    font-weight: 500;
+    ${'' /* font-family: ${props => props.serif ? 'Cormorant Garamond' : 'inherit'};
+    font-weight: 500; */}
     text-decoration: underline;
     text-decoration-color: blue;
   }
@@ -17,7 +17,7 @@ const StyledLink = styled.a`
 
 export default function ExtLink(props) {
   return (
-    <StyledLink href={props.href} serif={props.serif} target="_blank">
+    <StyledLink href={props.href} target="_blank">
       {props.children}
     </StyledLink>
   )

@@ -8,12 +8,11 @@ const SocFooter = styled.div`
   transform: rotate(-90deg);
   right: -3%;
   bottom: 5vw;
-  @media screen and (max-width: 600px) {
-    position: relative;
-    transform: none;
-    width: 50%;
-    left: 25%;
-    bottom: 5%;
+  @media screen and (max-width: 650px) {
+    display: none;
+  }
+  @media screen and (max-height: 500px) {
+    display: none;
   }
 `
 

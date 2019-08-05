@@ -26,6 +26,12 @@ const PageTitle = styled.div`
   font-size: 2em;
   transform: rotate(-90deg);
   color: blue;
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
+  @media screen and (max-height: 500px) {
+    display: none;
+  }
 `
 export default function Bluebar(props) {
   return (
