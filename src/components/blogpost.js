@@ -11,7 +11,7 @@ const Container = styled.div`
 `
 
 const BigDate = styled.h1`
-  text-align: center;
+  text-align: left;
   font-family: 'Cormorant Garamond';
   font-weight: 600;
   font-style: italic;

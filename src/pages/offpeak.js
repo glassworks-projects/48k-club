@@ -7,7 +7,7 @@ import styled from "styled-components"
 import "../styles/global.css"
 
 const Description = styled.div`
-  width: 45vw;
+  width: 55vw;
   font-size: 1.5em;
   text-align: center;
   font-family: Cormorant Garamond;
@@ -87,32 +87,32 @@ export default class OffPeak extends React.Component {
             <Nav>
               <LI>
                 <ExtLink href="https://weareinsert.com/textual/off-peak-free-at-last/">
-                  006: FREE AT LAST
+                  FREE AT LAST
                 </ExtLink>
               </LI>
               <LI>
                 <ExtLink href="https://weareinsert.com/textual/off-peak-tomas-fraser/">
-                  005: TOMAS FRASER
+                  TOMAS FRASER
                 </ExtLink>
               </LI>
               <LI>
                 <ExtLink href="https://weareinsert.com/textual/off-peak-bbylu/">
-                  004: BBYLU
+                  BBYLU
                 </ExtLink>
               </LI>
               <LI>
                 <ExtLink href="https://weareinsert.com/textual/off-peak-spurz/">
-                  003: SPURZ
+                  SPURZ
                 </ExtLink>
               </LI>
               <LI>
                 <ExtLink href="https://weareinsert.com/textual/off-peak-jsport/">
-                  002: JSPORT
+                  JSPORT
                 </ExtLink>
               </LI>
               <LI>
                 <ExtLink href="https://weareinsert.com/textual/off-peak-qrtr/">
-                  001: QRTR
+                  QRTR
                 </ExtLink>
               </LI>
             </Nav>

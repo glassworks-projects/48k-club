@@ -11,7 +11,7 @@
   background: 0 0;
   border: 0;
   font-size: 32px;
-  cursor: pointer
+  cursor: inherit
 }
 
 .carousel .control-arrow:hover {

@@ -43,8 +43,7 @@ export default class GF00 extends React.Component {
           ]
         }
         bodytext={[
-          <p>Installment: one</p>,
-          <p>Date: May 19, 2018</p>,
+          <p>First installment<br />May 19, 2018</p>,
           <p>Lineup: <br /> <br />
             Inkke (LuckyMe / Glasgow)<br />
             DJ Delish (Sweat Equity / Philadelphia)<br />

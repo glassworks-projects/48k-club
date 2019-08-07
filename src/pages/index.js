@@ -73,9 +73,9 @@ export default class Index extends React.Component {
             <BlueLi onClick={this.postLoad.bind(this)}>BLOG</BlueLi>
             {this.state.showBlog && <BlogCarousel />}
             <li><InLink to="releases">RELEASES</InLink></li>
-            <li><ExtLink href="https://48ksps.bigcartel.com">STORE</ExtLink></li>
             <li><InLink to="geofront">GEOFRONT</InLink></li>
             <li><InLink to="offpeak">OFF PEAK</InLink></li>
+            <li><ExtLink href="https://48ksps.bigcartel.com">STORE</ExtLink></li>
             <li><InLink to="about">ABOUT</InLink></li>
           </HomeNav>
           <br />

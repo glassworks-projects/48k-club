@@ -49,8 +49,7 @@ export default class GF03 extends React.Component {
           ]
         }
         bodytext={[
-          <p>Installment: four</p>,
-          <p>Date: May 10, 2019</p>,
+          <p>Fourth installment <br /> May 10, 2019</p>,
           <p>Lineup: <br /> <br />
             Mobilegirl (Discwoman / Berlin)<br />
             NKC (Her Records, Even The Strong / UK) <br />

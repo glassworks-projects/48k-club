@@ -49,8 +49,7 @@ export default class GF02 extends React.Component {
           ]
         }
         bodytext={[
-          <p>Installment: three</p>,
-          <p>Date: December 07, 2018</p>,
+          <p>Third installment<br />December 07, 2018</p>,
           <p>Lineup: <br /> <br />
             coucou chloe (live) (NUXXE / London)<br />
             Dis Fig (PTP / Berlin) <br />

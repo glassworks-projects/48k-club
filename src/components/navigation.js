@@ -79,8 +79,8 @@ var styles = {
   },
   bmMenu: {
     background: 'black',
-    fontSize: '2em',
-    lineHeight: `1.2em`,
+    fontSize: '14vw',
+    lineHeight: `0.65em`,
     textAlign: 'center',
     border: '1px solid blue'
   },

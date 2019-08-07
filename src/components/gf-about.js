@@ -30,11 +30,11 @@ const Num = styled.h1`
   font-weight: 300;
   font-size: 18vw;
   position: absolute;
-  bottom: -5vh;
+  bottom: -10vh;
   right: 5vw;
   @media screen and (max-width: 600px) {
     bottom: auto;
-    top: 20vh;
+    top: 23vh;
   }
 `
 

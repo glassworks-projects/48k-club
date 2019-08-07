@@ -43,8 +43,7 @@ export default class GF01 extends React.Component {
           ]
         }
         bodytext={[
-          <p>Installment: two</p>,
-          <p>Date: August 25, 2018</p>,
+          <p>Second installment<br />August 25, 2018</p>,
           <p>Lineup: <br /> <br />
             GILA (Lex Records / Denver)<br />
             Free At Last w/ special guest Crackstevens<br />
