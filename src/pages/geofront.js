@@ -1,8 +1,6 @@
 import React from "react"
 import {Link} from "gatsby"
 import {Wrapper, InLink, ExtLink, Navigation, Bluebar, Socials, Poster} from "../components/export"
-import typography from "../utils/typography"
-import { TypographyStyle, GoogleFont } from 'react-typography'
 import styled from "styled-components"
 import "../styles/global.css"
 import { useSpring, animated } from 'react-spring'
@@ -65,16 +63,16 @@ function Static() {
   return (
     <Container>
       <Link to="geofront-03">
-        <IMG src={require("../media/posters/gf_three.png")} />
+        <IMG src={require("../media/posters/gf_three.png")} alt="GeoFront-03 Poster"/>
       </Link>
       <Link to="geofront-02">
-        <IMG src={require("../media/posters/gf_two.jpg")} />
+        <IMG src={require("../media/posters/gf_two.jpg")} alt="GeoFront-02 Poster"/>
       </Link>
       <Link to="geofront-01">
-        <IMG src={require("../media/posters/gf_one.png")} />
+        <IMG src={require("../media/posters/gf_one.png")} alt="GeoFront-01 Poster"/>
       </Link>
       <Link to="geofront-00">
-        <IMG src={require("../media/posters/gf_zero.png")} />
+        <IMG src={require("../media/posters/gf_zero.png")} alt="GeoFront-00 Poster"/>
       </Link>
     </Container>
   )

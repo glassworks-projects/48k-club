@@ -7,8 +7,6 @@ import logo from "../media/logo.png"
 import {SVG} from "../components/export"
 import React from "react"
 import styled from "styled-components"
-import typography from "../utils/typography"
-import { TypographyStyle, GoogleFont } from 'react-typography'
 
 const Wrap = styled.section`
   cursor: crosshair;
@@ -52,12 +50,10 @@ export default function Wrapper (props) {
   return (
     <Wrap blue={props.blue}>
       <head>
-        <TypographyStyle typography={typography} />
-        <GoogleFont typography={typography} />
         <Title title={props.title}/>
       </head>
       <Logo to="" style={{cursor: `inherit`}}>
-        <img src={logo}  />
+        <img src={logo} alt="logo" />
       </Logo>
       {props.children}
     </Wrap>

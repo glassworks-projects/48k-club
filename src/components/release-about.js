@@ -8,7 +8,7 @@ const Cover = styled.img`
   object-fit: contain;
   height: inherit;
   align-self: flex-start;
-  margin-left: 8vw;
+  margin-left: 2vw;
   @media screen and (max-width: 600px) {
     align-self: center;
     max-width: 80vw;
@@ -96,7 +96,13 @@ const L = styled(Link)`
     text-decoration-color: blue;
   }
 `
-
+const Arrow = styled.img`
+  width: 100px;
+  padding-left: 2vw;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 0px;
+`
 // const RelNav = styled.div`
 //   height: inherit;
 //   padding-top: 1vh;
@@ -107,14 +113,22 @@ const UL = styled.ul`
   text-align: right;
   list-style: none;
 `
-
+const L2 = styled(Link)`
+  align-self: flex-end;
+  margin-bottom: 0px;
+  cursor: inherit;
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
+`
 export default function Release (props) {
   return(
     <Wrapper title={props.title}>
       <body>
         <Navigation />
         <Container>
-          <Cover src={props.img} />
+          <L2 to='releases'><Arrow src={require("../media/arrow.png")} alt="back arrow"/></L2>
+          <Cover src={props.img} alt="album artwork"/>
           <Textbox>
             <H2>{props.artistName}</H2>
             <H1>{props.releaseName}</H1>
@@ -127,14 +141,6 @@ export default function Release (props) {
             <div>{props.anythingElse}</div>
             <Btn href={props.href} target="_blank">Stream / Buy</Btn> <br/>
           </Textbox>
-          {/* <RelNav>
-            <H2>Other releases:</H2>
-            <UL>
-              <li>one</li>
-              <li>two</li>
-              <li>three</li>
-            </UL>
-          </RelNav> */}
           <Socials color="blue"/>
         </Container>
 

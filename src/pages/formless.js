@@ -1,7 +1,20 @@
 import React from "react"
-import {Release} from "../components/export"
+import {Release, ExtLink} from "../components/export"
 import formless from "../media/album-artwork/formless.jpg"
 import {releasetext} from "../text/release-about.json"
+
+function Press() {
+  return(
+    <div style={{paddingLeft: `2vw`}}>
+      <p>
+        <h3>Press: </h3>
+        <ExtLink href="https://djmag.com/music/bass/formless" target="_blank">
+          7.5/10 in DJ Mag
+        </ExtLink>
+      </p>
+    </div>
+  )
+}
 
 export default class Formless extends React.Component {
   constructor(props) {
@@ -35,6 +48,7 @@ export default class Formless extends React.Component {
         releaseName= "FORMLESS"
         text={releasetext.formless_about}
         href="http://smarturl.it/formless-ep"
+        anythingElse={Press()}
       />
     )
   }

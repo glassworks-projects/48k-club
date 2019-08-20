@@ -1,7 +1,5 @@
 import React from "react"
 import {Wrapper, InLink, ExtLink, SVG, BlogCarousel, Socials} from "../components/export"
-import typography from "../utils/typography"
-import { TypographyStyle, GoogleFont } from 'react-typography'
 import styled from "styled-components"
 import "../styles/global.css"
 

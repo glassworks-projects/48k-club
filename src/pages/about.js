@@ -1,8 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import typography from "../utils/typography"
 import {Wrapper, Navigation, Bluebar, ExtLink, Socials} from "../components/export"
-import {TypographyStyle, GoogleFont} from 'react-typography'
 import "../styles/global.css"
 
 const BodyText = styled.div`
@@ -12,9 +10,6 @@ const BodyText = styled.div`
   top: 35%;
   width: 38%;
   left: 31%;
-  font-family: Cormorant Garamond;
-  font-style: normal;
-  font-weight: 400;
   font-size: 1.5em;
   @media screen and (max-width: 600px) {
     width: 80%;

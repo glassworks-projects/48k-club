@@ -2,9 +2,9 @@ module.exports = {
   plugins: [
     `gatsby-plugin-styled-components`,
     {
-      resolve: `gatsby-plugin-typography`,
+      resolve: `gatsby-plugin-favicon`,
       options: {
-        pathToConfigModule: `src/utils/typography`
+        logo: "./src/favicon.png",
       },
     },
   ],

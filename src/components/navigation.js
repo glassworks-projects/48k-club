@@ -1,9 +1,7 @@
 import React from "react"
-import typography from "../utils/typography"
-import ExtLink from "../components/extlink"
+import ExtLink from "../components/export"
 import {Link} from "gatsby"
 import { slide as Menu } from 'react-burger-menu'
-import { TypographyStyle, GoogleFont } from 'react-typography'
 import styled from "styled-components"
 
 const Nav = styled.ul`

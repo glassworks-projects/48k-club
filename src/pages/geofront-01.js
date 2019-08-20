@@ -1,7 +1,5 @@
 import React from "react"
-import {Wrapper, ImgCarousel, GFAbout} from "../components/export"
-import typography from "../utils/typography"
-import { TypographyStyle, GoogleFont } from 'react-typography'
+import {Wrapper, ImgCarousel, GFAbout, ExtLink} from "../components/export"
 import styled from "styled-components"
 import {Link} from "gatsby"
 
@@ -33,25 +31,52 @@ export default class GF01 extends React.Component {
       <GFAbout
         title="GeoFront-01"
         images={[
-          <div><img src={require("../media/gf01/gf01-01.jpg")}/></div>,
-          <div><img src={require("../media/gf01/gf01-02.jpg")}/></div>,
-          <div><img src={require("../media/gf01/gf01-03.jpg")}/></div>,
-          <div><img src={require("../media/gf01/gf01-04.jpg")}/></div>,
-          <div><img src={require("../media/gf01/gf01-05.jpg")}/></div>,
-          <div><img src={require("../media/gf01/gf01-06.jpg")}/></div>,
-          <div><img src={require("../media/gf01/gf01-07.jpg")}/></div>
+          <div><img src={require("../media/gf01/gf01-01.jpg")} alt="event"/></div>,
+          <div><img src={require("../media/gf01/gf01-02.jpg")} alt="event"/></div>,
+          <div><img src={require("../media/gf01/gf01-03.jpg")} alt="event"/></div>,
+          <div><img src={require("../media/gf01/gf01-04.jpg")} alt="event"/></div>,
+          <div><img src={require("../media/gf01/gf01-05.jpg")} alt="event"/></div>,
+          <div><img src={require("../media/gf01/gf01-06.jpg")} alt="event"/></div>,
+          <div><img src={require("../media/gf01/gf01-07.jpg")} alt="event"/></div>
           ]
         }
         bodytext={[
           <p>Second installment<br />August 25, 2018</p>,
           <p>Lineup: <br /> <br />
-            GILA (Lex Records / Denver)<br />
-            Free At Last w/ special guest Crackstevens<br />
-            Reddaughter <br />
-            Copout (PTP, 48k) <br />
-            Wild Kid (48k) <br />
-            Montepiedra (48k) <br />
-            Juke Bounce Werk presents: Kush Jones, Swisha, Los, Scatta
+            <ExtLink href="https://soundcloud.com/gila-monsta" target="_blank">
+              GILA (Lex Records / Denver)<br />
+            </ExtLink>
+            <ExtLink href="https://soundcloud.com/freeeatlasttt" target="_blank">
+              Free At Last
+            </ExtLink> w/ special guest <ExtLink href="https://soundcloud.com/crackstevens" target="_blank">
+              Crackstevens<br />
+            </ExtLink>
+            <ExtLink href="https://soundcloud.com/red_daughter" target="_blank">
+              Reddaughter <br />
+            </ExtLink>
+
+            <ExtLink href="https://soundcloud.com/copout" target="_blank">
+              Copout (PTP, 48k) <br />
+            </ExtLink>
+
+            <ExtLink href="https://soundcloud.com/wild_kid" target="_blank">
+              Wild Kid (48k) <br />
+            </ExtLink>
+
+            <ExtLink href="https://soundcloud.com/mmontepiedra" target="_blank">
+              Montepiedra (48k) <br />
+            </ExtLink>
+
+            <ExtLink href="https://soundcloud.com/jukebouncewerk" target="_blank">
+              Juke Bounce Werk
+            </ExtLink> <span>presents: </span>
+            <ExtLink href="https://soundcloud.com/kush_jones" target="_blank">Kush Jones, </ExtLink>
+            <ExtLink href="https://soundcloud.com/dj-swisha" target="_blank">DJ Swisha, </ExtLink>
+            <ExtLink href="https://soundcloud.com/losjbw" target="_blank">
+            Los, </ExtLink>
+            <ExtLink href="https://soundcloud.com/scatta_jbw" target="_blank">
+              Scatta
+            </ExtLink>
           </p>,
           <p>Location: H0L0 (Ridgewood, Queens)</p>
             ]

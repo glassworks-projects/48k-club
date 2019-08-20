@@ -1,6 +1,4 @@
 import React from "react"
-import typography from "../utils/typography"
-import { TypographyStyle, GoogleFont } from 'react-typography'
 import styled from "styled-components"
 import {text, date} from "../text/blog-post-one.json"
 import sample from "../media/sample.jpg"

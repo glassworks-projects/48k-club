@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import typography from "../utils/typography"
 
 const Container = styled.div`
   display: flex;
@@ -12,13 +11,7 @@ const Container = styled.div`
 
 const BigDate = styled.h1`
   text-align: left;
-  font-family: 'Cormorant Garamond';
-  font-weight: 600;
-  font-style: italic;
-  font-size: 5em;
-  @media screen and (max-width: 600px) {
-    font-size: 3em;
-  }
+  font-size: 3em;
 `
 
 const Thumb = styled.img`
@@ -58,7 +51,7 @@ export default function BlogPost(props) {
   return (
     <div>
       <Container>
-        <Thumb src={props.img}/>
+        <Thumb src={props.img} alt="thumbnail image"/>
         <Line />
         <BodyText>
           <BigDate>{props.date}</BigDate>

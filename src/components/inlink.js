@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import typography from "../utils/typography"
 import {Link} from "gatsby"
 
 const StyledLink = styled(Link)`

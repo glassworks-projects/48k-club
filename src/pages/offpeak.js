@@ -1,8 +1,6 @@
 import React from "react"
 import {text} from "../text/offpeak-about.json"
 import {ExtLink, Navigation, Bluebar, Wrapper, Socials} from "../components/export"
-import typography from "../utils/typography"
-import { TypographyStyle, GoogleFont } from 'react-typography'
 import styled from "styled-components"
 import "../styles/global.css"
 
@@ -10,7 +8,6 @@ const Description = styled.div`
   width: 55vw;
   font-size: 1.5em;
   text-align: center;
-  font-family: Cormorant Garamond;
   font-weight: 400;
   @media screen and (max-width: 650px) {
     width: 80vw;

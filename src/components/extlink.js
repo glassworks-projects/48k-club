@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import typography from "../utils/typography"
 
 const StyledLink = styled.a`
   color: white;

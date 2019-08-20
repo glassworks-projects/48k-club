@@ -4,6 +4,9 @@ var plugins = [{
     },{
       plugin: require('/Users/ryanglassman/code/node_modules/gatsby-plugin-typography/gatsby-ssr'),
       options: {"plugins":[],"pathToConfigModule":"src/utils/typography"},
+    },{
+      plugin: require('/Users/ryanglassman/code/48k-club/gatsby-site/node_modules/gatsby-plugin-favicon/gatsby-ssr'),
+      options: {"plugins":[],"logo":"./src/favicon.png"},
     }]
 // During bootstrap, we write requires at top of this file which looks like:
 // var plugins = [
