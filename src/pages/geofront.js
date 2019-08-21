@@ -38,6 +38,8 @@ const Container = styled.div`
     padding-top: 12vh;
   }
 `
+const small = (typeof window !== `undefined`) ? (window.innerWidth < 600 || window.innerHeight < 500) : false;
+
 function Floats() {
   return (
     <div>
@@ -89,17 +91,24 @@ export default class Geofront extends React.Component {
   }
 
   componentDidMount() {
-    this.updateWindowDimensions();
-    window.addEventListener('resize', this.updateWindowDimensions);
+    if (typeof window !== `undefined`) {
+      this.updateWindowDimensions();
+      window.addEventListener('resize', this.updateWindowDimensions);
+    }
   }
 
   componentWillUnmount() {
-    window.removeEventListener('resize', this.updateWindowDimensions);
+    if (typeof window !== `undefined`) {
+      window.removeEventListener('resize', this.updateWindowDimensions);
+    }
   }
 
   updateWindowDimensions() {
-    this.setState({ width: window.innerWidth, height: window.innerHeight });
+    if (typeof window !== `undefined`) {
+      this.setState({ width: window.innerWidth, height: window.innerHeight });
+    }
   }
+
   render () {
     return (
       <Wrapper title="GeoFront" blue={true}>
@@ -107,7 +116,7 @@ export default class Geofront extends React.Component {
           <Bluebar name="GEOFRONT"/>
           <Socials color="black"/>
           <Navigation />
-          {(window.innerWidth < 600 || window.innerHeight < 500) ? <Static /> :  <Floats />}
+          {(small) ? <Static /> :  <Floats />}
         </body>
 
       </Wrapper>

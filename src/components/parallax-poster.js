@@ -22,6 +22,8 @@ const trans2 = (x, y) => `translate3d(${x / 8}px,${y / 8}px,0)`
 const trans3 = (x, y) => `translate3d(${x / 6}px,${y / 6}px,0)`
 const trans4 = (x, y) => `translate3d(${x / 3.5}px,${y / 3.5}px,0)`
 
+const height = (typeof window !== `undefined`) ? (window.innerHeight / 2) : 800;
+
 export default function Poster({first, second, third, top, left}) {
   const Container = styled.div`
     cursor: crosshair;
@@ -35,7 +37,7 @@ export default function Poster({first, second, third, top, left}) {
     justify-content: center;
   `
 
-  const calc = (x, y) => [x - 300 - left, y - (window.innerHeight / 2)]
+  const calc = (x, y) => [x - 300 - left, y - (height / 2)]
 
   const [props, set] = useSpring(() => (
     { xy: [0, 0], config: { mass: 10, tension: 550, friction: 140 } })

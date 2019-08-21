@@ -3,7 +3,7 @@ var plugins = [{
       options: {"plugins":[]},
     },{
       plugin: require('/Users/ryanglassman/code/node_modules/gatsby-plugin-typography/gatsby-ssr'),
-      options: {"plugins":[],"pathToConfigModule":"src/utils/typography"},
+      options: {"plugins":[],"pathToConfigModule":"src/utils/typography","omitGoogleFont":true},
     },{
       plugin: require('/Users/ryanglassman/code/48k-club/gatsby-site/node_modules/gatsby-plugin-favicon/gatsby-ssr'),
       options: {"plugins":[],"logo":"./src/favicon.png"},

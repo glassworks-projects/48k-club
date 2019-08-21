@@ -27,16 +27,22 @@ export default class Formless extends React.Component {
   }
 
   componentDidMount() {
-    this.updateWindowDimensions();
-    window.addEventListener('resize', this.updateWindowDimensions);
+    if (typeof window !== `undefined`) {
+      this.updateWindowDimensions();
+      window.addEventListener('resize', this.updateWindowDimensions);
+    }
   }
 
   componentWillUnmount() {
-    window.removeEventListener('resize', this.updateWindowDimensions);
+    if (typeof window !== `undefined`) {
+      window.removeEventListener('resize', this.updateWindowDimensions);
+    }
   }
 
   updateWindowDimensions() {
-    this.setState({ width: window.innerWidth, height: window.innerHeight });
+    if (typeof window !== `undefined`) {
+      this.setState({ width: window.innerWidth, height: window.innerHeight });
+    }
   }
 
   render() {
