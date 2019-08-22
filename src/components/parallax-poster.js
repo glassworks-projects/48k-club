@@ -27,40 +27,36 @@ function Height() {
 }
 
 export default function Poster({first, second, third, top, left}) {
-  const Container = styled.div`
-    cursor: crosshair;
-    width: 600px;
-    height: 600px;
-    position: absolute;
-    top: ${top}px;
-    left: ${left}px;
-    ${'' /* display: flex;
-    align-items: center;
-    justify-content: center; */}
-  `
 
-  const calc = (x, y) => [x - 300 - left, y - (Height() / 2)]
+  var divStyle = {
+    cursor: `crosshair`,
+    width: `600px`,
+    height: `600px`,
+    position: `absolute`,
+    top: `${top}px`,
+    left: `${left}px`,
+  }
+
+  var calc = (x, y) => [x - 300 - left, y - (Height() / 2)]
 
   const [props, set] = useSpring(() => (
     { xy: [0, 0], config: { mass: 10, tension: 550, friction: 140 } })
   )
 
-  const Card1 = styled(Card)`
-    background-image: url(${first});
-  `
-
-  const Card2 = styled(Card)`
-    background-image: url(${second});
-  `
-
-  const Card3 = styled(Card)`
-    background-image: url(${third});
-  `
   return (
-    <Container onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}>
-      <Card1 style={{ transform: props.xy.interpolate(trans1) }} />
-      <Card2 style={{ transform: props.xy.interpolate(trans2) }} />
-      <Card3 style={{ transform: props.xy.interpolate(trans3) }} />
-    </Container>
+    <div style={divStyle} onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}>
+      <Card style={{
+        transform: props.xy.interpolate(trans1),
+        backgroundImage: `url(${first})`
+      }} />
+      <Card style={{
+        transform: props.xy.interpolate(trans2),
+        backgroundImage: `url(${second})`
+      }} />
+      <Card style={{
+        transform: props.xy.interpolate(trans3),
+        backgroundImage: `url(${third})`}}
+      />
+    </div>
   )
 }

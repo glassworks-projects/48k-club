@@ -10,7 +10,7 @@ function Press() {
   return (
     <div style={{paddingLeft: `2vw`}}>
       <p>
-        <h3>Press: </h3>
+        <h3 style={{fontWeight: `300`}}>Press: </h3>
         <ExtLink href="https://www.tinymixtapes.com/chocolate-grinder/premiere-wild-kid-lapse" target="_blank">
           "Lapse" premiered at Tiny Mix Tapes
         </ExtLink> <br />

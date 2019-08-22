@@ -8,8 +8,8 @@ const BodyText = styled.div`
   text-align: center;
   height: 30%;
   top: 35%;
-  width: 38%;
-  left: 31%;
+  width: 50vw;
+  left: 25vw;
   font-size: 1.5em;
   @media screen and (max-width: 600px) {
     width: 80%;
@@ -67,7 +67,7 @@ export default class About extends React.Component {
         <body>
           <BodyText>
             We make work that we think deserves a place in the world.
-            We aim to give you something that matters to you.
+            We aim to give you something that matters to you. <br />
             Good art, no bullshit.
             <br /> <br />
             Say hi: <Mail href="mailto:hello@48k.club">hello@48k.club</Mail>

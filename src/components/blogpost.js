@@ -5,6 +5,7 @@ const Container = styled.div`
   display: flex;
   border: 1px solid white;
   height: 350px;
+  font-weight: 300;
   width: 75%;
   margin: auto;
 `
@@ -12,6 +13,7 @@ const Container = styled.div`
 const BigDate = styled.h1`
   text-align: left;
   font-size: 3em;
+  font-weight: 300;
 `
 
 const Thumb = styled.img`

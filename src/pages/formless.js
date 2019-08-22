@@ -7,7 +7,7 @@ function Press() {
   return(
     <div style={{paddingLeft: `2vw`}}>
       <p>
-        <h3>Press: </h3>
+        <h3 style={{fontWeight: `300`}}>Press: </h3>
         <ExtLink href="https://djmag.com/music/bass/formless" target="_blank">
           7.5/10 in DJ Mag
         </ExtLink>

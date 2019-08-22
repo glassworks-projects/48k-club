@@ -13,7 +13,7 @@ function Press() {
   return(
     <div style={{paddingLeft: `2vw`}}>
       <p>
-        <h3>Press: </h3>
+        <h3 style={{fontWeight: `300`}}>Press: </h3>
         8/10 in Mixmag <br />
         <ExtLink href="https://djmag.com/music/bass/scream-tape" target="_blank">
           9.5/10 in DJ Mag

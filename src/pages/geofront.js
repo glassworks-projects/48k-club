@@ -122,7 +122,6 @@ export default class Geofront extends React.Component {
           <Navigation />
           {Small() ? <Static /> :  <Floats />}
         </body>
-
       </Wrapper>
     )
   }

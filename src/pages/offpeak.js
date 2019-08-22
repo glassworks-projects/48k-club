@@ -1,11 +1,10 @@
 import React from "react"
-import {text} from "../text/offpeak-about.json"
 import {ExtLink, Navigation, Bluebar, Wrapper, Socials} from "../components/export"
 import styled from "styled-components"
 import "../styles/global.css"
 
 const Description = styled.div`
-  width: 55vw;
+  width: 65vw;
   font-size: 1.5em;
   text-align: center;
   font-weight: 400;
@@ -23,7 +22,7 @@ const Nav = styled.ul`
   text-align: center;
   list-style: none;
   width: 80vw;
-  padding-top: 1em;
+  padding-top: 0.7em;
   @media screen and (max-width: 650px) {
     font-size: 2em;
   }
@@ -86,7 +85,11 @@ export default class OffPeak extends React.Component {
           <Bluebar name="OFF PEAK"/>
           <Socials color="blue" />
           <Container>
-            <Description>{text}</Description>
+            <Description>
+              Off Peak is a playlist and interview series produced in collaboration with Insert.
+              <br />
+              Click on the installments below to read the interviews and hear the playlists.
+            </Description>
             <Nav>
               <LI>
                 <ExtLink href="https://weareinsert.com/textual/off-peak-free-at-last/">

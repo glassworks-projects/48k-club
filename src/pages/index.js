@@ -32,6 +32,18 @@ const BlueLi = styled.li`
   }
 `
 
+function xCoord () {
+  if (typeof window !== `undefined`) {
+    return window.innerWidth * 0.99
+  }
+}
+
+function yCoord () {
+  if (typeof window !== `undefined`) {
+    return window.innerHeight * 0.99
+  }
+}
+
 export default class Index extends React.Component {
 
   constructor(props) {
@@ -86,7 +98,7 @@ export default class Index extends React.Component {
           <Socials color="black"/>
 
           <SVG>
-            <polygon points="0,2 1260,2 2,700" />
+            <polygon points={`0,2 ${xCoord()},2 2,${yCoord()}`}/>
           </SVG>
         </body>
         {/* </Layout> */}
