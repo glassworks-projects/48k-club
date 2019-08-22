@@ -26,9 +26,6 @@ const Wrap = styled.section`
     }) : ({background:'black'})};
 `
 
-// const Logo = styled.img`
-//
-// `
 const Logo = styled(Link)`
   position: absolute;
   width: 135px;

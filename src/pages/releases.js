@@ -38,7 +38,9 @@ const L = styled(Link)`
   color:inherit;
 `
 
-const wide = (typeof window !== `undefined`) ? (window.innerWidth > 600) : true;
+function Wide() {
+  return (typeof window !== `undefined`) ? (window.innerWidth > 600) : true;
+}
 
 export default class Releases extends React.Component {
 
@@ -78,10 +80,10 @@ export default class Releases extends React.Component {
           <Bluebar name="RELEASES" />
 
           <Titles>
-            <L to="formless"><Entry left={(wide) ? "2vw" : "0vw"}><span>FORMLESS</span></Entry></L>
-            <L to="screamtape"><Entry left={(wide) ? "4vw" : "0vw"}>SCREAM TAPE</Entry></L>
-            <L to="lapse"><Entry left={(wide) ? "10vw" : "0vw"}>LAPSE (MIRACLES RMX)</Entry></L>
-            <L to="cathedral"><Entry left={(wide) ? "8vw" : "0vw"}>CATHEDRAL</Entry></L>
+            <L to="formless"><Entry left={Wide() ? "2vw" : "0vw"}><span>FORMLESS</span></Entry></L>
+            <L to="screamtape"><Entry left={Wide() ? "4vw" : "0vw"}>SCREAM TAPE</Entry></L>
+            <L to="lapse"><Entry left={Wide() ? "10vw" : "0vw"}>LAPSE (MIRACLES RMX)</Entry></L>
+            <L to="cathedral"><Entry left={Wide() ? "8vw" : "0vw"}>CATHEDRAL</Entry></L>
           </Titles>
           <Socials color="black" />
         </body>

@@ -9,7 +9,9 @@ const Crs = styled(Carousel)`
   right: 5vw; */}
   z-index: 0;
 `
-const wide = (typeof window !== `undefined`) ? (window.innerWidth > 600) : true;
+function Wide() {
+  return (typeof window !== `undefined`) ? (window.innerWidth > 600) : true;
+}
 
 export default function ImgCarousel (props) {
   return (
@@ -17,7 +19,7 @@ export default function ImgCarousel (props) {
       showThumbs={false}
       autoPlay={true}
       showIndicators={false}
-      width={(wide) ? "60vw" : "90vw"}
+      width={Wide() ? "60vw" : "90vw"}
       useKeyboardArrows={true}
     >
       {props.children}

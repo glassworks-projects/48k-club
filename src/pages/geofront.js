@@ -38,23 +38,27 @@ const Container = styled.div`
     padding-top: 12vh;
   }
 `
-const small = (typeof window !== `undefined`) ? (window.innerWidth < 600 || window.innerHeight < 500) : false;
+function Small() {
+  return (typeof window !== `undefined`) ?
+    (window.innerWidth < 600 || window.innerHeight < 500) :
+    false;
+}
 
 function Floats() {
   return (
     <div>
       <Scroll>
         <Link to="geofront-02">
-          <Poster first={first02} second={second02} third={third02} top={200} left={450} />
+          <Poster first={first02} second={second02} third={third02} top={200} left={550} />
         </Link>
         <Link to="geofront-00">
-          <Poster first={first00} second={second00} third={third00} top={100} left={0} />
+          <Poster first={first00} second={second00} third={third00} top={100} left={100} />
         </Link>
         <Link to="geofront-03">
-          <Poster first={first03} second={second03} third={third03} top={750} left={600}/>
+          <Poster first={first03} second={second03} third={third03} top={750} left={700}/>
         </Link>
         <Link to="geofront-01">
-          <Poster first={first01} second={second01} third={third01} top={800} left={10}/>
+          <Poster first={first01} second={second01} third={third01} top={800} left={110}/>
         </Link>
       </Scroll>
     </div>
@@ -116,7 +120,7 @@ export default class Geofront extends React.Component {
           <Bluebar name="GEOFRONT"/>
           <Socials color="black"/>
           <Navigation />
-          {(small) ? <Static /> :  <Floats />}
+          {Small() ? <Static /> :  <Floats />}
         </body>
 
       </Wrapper>

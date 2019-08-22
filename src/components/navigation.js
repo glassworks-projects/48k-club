@@ -115,14 +115,14 @@ function Ham() {
 }
 
 function SmallWindow() {
-  if (typeof window !== `undefined`) {
-    return (window.innerWidth < 600 || window.innerHeight < 500)
-  }
+  return (typeof window !== `undefined`) ?
+    (window.innerWidth < 600 || window.innerHeight < 500) :
+    false;
 }
 
 export default function Navigation () {
   return (
-  (SmallWindow()) ?
+  SmallWindow() ?
     <Ham />
     :
     <Nav>

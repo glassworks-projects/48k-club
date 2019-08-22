@@ -74,9 +74,6 @@ const Container = styled.div`
     height: 80vh;
   }
 `
-// const Container = styled.div`
-//   display: flex;
-// `
 
 export default function GFAbout (props) {
   return (
