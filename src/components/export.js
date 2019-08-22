@@ -14,6 +14,7 @@ import GFAbout from "../components/gf-about"
 import Socials from "../components/socials"
 import Poster from "../components/parallax-poster"
 import Release from "../components/release-about"
+import ImgAbout from "../components/img-about"
 
 export {
   Wrapper,
@@ -28,5 +29,6 @@ export {
   GFAbout,
   Socials,
   Poster,
-  Release
+  Release,
+  ImgAbout
 }

@@ -2,7 +2,7 @@ var plugins = [{
       plugin: require('/Users/ryanglassman/code/48k-club/gatsby-site/node_modules/gatsby-plugin-styled-components/gatsby-ssr'),
       options: {"plugins":[]},
     },{
-      plugin: require('/Users/ryanglassman/code/node_modules/gatsby-plugin-typography/gatsby-ssr'),
+      plugin: require('/Users/ryanglassman/code/48k-club/gatsby-site/node_modules/gatsby-plugin-typography/gatsby-ssr'),
       options: {"plugins":[],"pathToConfigModule":"src/utils/typography","omitGoogleFont":true},
     },{
       plugin: require('/Users/ryanglassman/code/48k-club/gatsby-site/node_modules/gatsby-plugin-favicon/gatsby-ssr'),

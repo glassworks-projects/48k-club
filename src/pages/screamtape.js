@@ -1,5 +1,5 @@
 import React from "react"
-import {Release, ExtLink} from "../components/export"
+import {ExtLink, ImgAbout} from "../components/export"
 import styled from "styled-components"
 import st from "../media/album-artwork/st.jpg"
 import {releasetext} from "../text/release-about.json"
@@ -63,11 +63,12 @@ export default class ScreamTape extends React.Component {
 
   render() {
     return(
-      <Release
+      <ImgAbout
+        gf={false}
         title="48K002 - Wild Kid - Scream Tape"
         img={st}
-        artistName= "WILD KID"
-        releaseName= "SCREAM TAPE"
+        heading = "WILD KID"
+        subheading = "SCREAM TAPE"
         text={releasetext.st_about}
         href="https://smarturl.it/screamtape"
         anythingElse={Press()}
@@ -75,3 +76,47 @@ export default class ScreamTape extends React.Component {
     )
   }
 }
+//
+// export default class ScreamTape extends React.Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+//       width: 0,
+//       height: 0
+//     }
+//     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+//   }
+//
+//   componentDidMount() {
+//     if (typeof window !== `undefined`) {
+//       this.updateWindowDimensions();
+//       window.addEventListener('resize', this.updateWindowDimensions);
+//     }
+//   }
+//
+//   componentWillUnmount() {
+//     if (typeof window !== `undefined`) {
+//       window.removeEventListener('resize', this.updateWindowDimensions);
+//     }
+//   }
+//
+//   updateWindowDimensions() {
+//     if (typeof window !== `undefined`) {
+//       this.setState({ width: window.innerWidth, height: window.innerHeight });
+//     }
+//   }
+//
+//   render() {
+//     return(
+//       <Release
+//         title="48K002 - Wild Kid - Scream Tape"
+//         img={st}
+//         artistName= "WILD KID"
+//         releaseName= "SCREAM TAPE"
+//         text={releasetext.st_about}
+//         href="https://smarturl.it/screamtape"
+//         anythingElse={Press()}
+//       />
+//     )
+//   }
+// }

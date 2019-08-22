@@ -1,5 +1,5 @@
 import React from "react"
-import {Release, ExtLink} from "../components/export"
+import {ImgAbout, ExtLink} from "../components/export"
 import formless from "../media/album-artwork/formless.jpg"
 import {releasetext} from "../text/release-about.json"
 
@@ -47,11 +47,12 @@ export default class Formless extends React.Component {
 
   render() {
     return(
-      <Release
+      <ImgAbout
+        gf={false}
         title="48K003 - Wild Kid - Formless"
         img={formless}
-        artistName= "WILD KID"
-        releaseName= "FORMLESS"
+        heading= "WILD KID"
+        subheading= "FORMLESS"
         text={releasetext.formless_about}
         href="http://smarturl.it/formless-ep"
         anythingElse={Press()}

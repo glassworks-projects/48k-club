@@ -22,6 +22,7 @@ const Mail = styled.a`
   font: inherit;
   color: white;
   text-decoration: none;
+  cursor: inherit;
 
   &:hover {
     text-decoration: underline;

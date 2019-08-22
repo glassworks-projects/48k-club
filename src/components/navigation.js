@@ -43,6 +43,7 @@ const NavLink = styled(Link)`
 const ExtNavLink = styled.a`
   color: white;
   text-decoration: none;
+  cursor: inherit;
 
   &:hover {
     text-decoration: underline;
@@ -128,9 +129,9 @@ export default function Navigation () {
     <Nav>
       <Li><NavLink to="">BLOG</NavLink></Li>
       <Li><NavLink to="releases">RELEASES</NavLink></Li>
-      <Li><ExtNavLink href="https://48ksps.bigcartel.com" target="_blank">STORE</ExtNavLink></Li>
       <Li><NavLink to="geofront">GEOFRONT</NavLink></Li>
       <Li><NavLink to="offpeak">OFF PEAK</NavLink></Li>
+      <Li><ExtNavLink href="https://48ksps.bigcartel.com" target="_blank">STORE</ExtNavLink></Li>
       <Li><NavLink to="about">ABOUT</NavLink></Li>
     </Nav>
   )
