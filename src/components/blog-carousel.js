@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import {text, date} from "../text/blog-post-one.json"
-import sample from "../media/sample.jpg"
+import acid from "../media/acid.png"
 import {BlogPost} from "../components/export"
 import {Carousel} from 'react-responsive-carousel'
 import '../styles/carousel.css'
@@ -20,7 +20,7 @@ export default function BlogCarousel () {
         <Carousel showThumbs={false} showStatus={false}
           useKeyboardArrows={true} className="carousel" showIndicators={false}>
           <div>
-            <BlogPost date={date} img={sample}>{str(text)}</BlogPost>
+            <BlogPost date={date} img={acid}>{str(text)}</BlogPost>
           </div>
         </Carousel>
       )

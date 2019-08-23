@@ -23,7 +23,6 @@ const Container = styled.div`
   top: 20vh;
   display: flex;
   height: 70vh;
-  ${'' /* margin-top: -35vh; */}
   width: 100%;
   align-items: center;
   @media screen and (max-width: 600px) {
@@ -67,7 +66,6 @@ const P = styled.p`
   padding-left: ${textPadding};
   font-weight: 300;
 `
-
 
 const SVG = styled.svg`
   position: relative;

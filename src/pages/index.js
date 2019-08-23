@@ -25,8 +25,6 @@ const BlueLi = styled.li`
   cursor: inherit;
 
   &:hover {
-    ${'' /* font-family: 'Cormorant Garamond';
-    font-weight: 500; */}
     text-decoration: underline;
     text-decoration-color: blue;
   }
@@ -82,9 +80,7 @@ export default class Index extends React.Component {
   render() {
     return (
       <Wrapper title="Home" blue={true} svg={true}>
-        {/* <Layout> */}
         <body>
-          {/* <Blue /> */}
           <HomeNav>
             <BlueLi onClick={this.postLoad.bind(this)}>BLOG</BlueLi>
             {this.state.showBlog && <BlogCarousel />}
@@ -96,13 +92,10 @@ export default class Index extends React.Component {
           </HomeNav>
           <br />
           <Socials color="black"/>
-
           <SVG>
             <polygon points={`0,2 ${xCoord()},2 2,${yCoord()}`}/>
           </SVG>
         </body>
-        {/* </Layout> */}
-
       </Wrapper>
     )
   }

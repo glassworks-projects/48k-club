@@ -10,10 +10,8 @@ import SVG from "../components/svg"
 import BlogPost from "../components/blogpost"
 import BlogCarousel from "../components/blog-carousel"
 import ImgCarousel from "../components/img-carousel"
-import GFAbout from "../components/gf-about"
 import Socials from "../components/socials"
 import Poster from "../components/parallax-poster"
-import Release from "../components/release-about"
 import ImgAbout from "../components/img-about"
 
 export {
@@ -26,9 +24,7 @@ export {
   BlogPost,
   BlogCarousel,
   ImgCarousel,
-  GFAbout,
   Socials,
   Poster,
-  Release,
   ImgAbout
 }
