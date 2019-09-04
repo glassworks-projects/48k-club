@@ -1,7 +1,5 @@
 import React from "react"
-import {Wrapper, ImgAbout, ExtLink} from "../components/export"
-import styled from "styled-components"
-import {Link} from "gatsby"
+import {ImgAbout, ExtLink} from "../components/export"
 
 export default class GF01 extends React.Component {
   constructor(props) {

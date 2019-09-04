@@ -3,13 +3,14 @@
 * with logo in the corner
 */
 import {Link} from "gatsby"
+import {Helmet} from "react-helmet"
 import logo from "../media/logo.png"
-import {SVG} from "../components/export"
 import React from "react"
 import styled from "styled-components"
 import "../styles/global.css"
 import typography from "../utils/typography"
 import {TypographyStyle} from 'react-typography'
+import preview from "../media/preview.png"
 
 const Wrap = styled.section`
   cursor: crosshair;
@@ -40,21 +41,26 @@ const Logo = styled(Link)`
     left: 43%;
   }
 `
-function Title(props) {
-  return (
-    <title>{props.title}</title>
-  )
-}
+// function Title(props) {
+//   return (
+//     <title>{props.title}</title>
+//   )
+// }
 
 export default function Wrapper (props) {
   return (
     <Wrap blue={props.blue}>
-      <head>
+      <Helmet>
         <TypographyStyle typography={typography} />
-        <Title title={props.title}/>
-      </head>
+        {/* <Title title={props.title}/> */}
+        <meta property="og:title" content={props.title} />
+        <meta property="og:image" content={preview} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://48k.club" />
+        <meta property="og:description" content="A record label and multimedia collective. NYC/Global." />
+      </Helmet>
       <Logo to="" style={{cursor: `inherit`}}>
-        <img src={logo}/>
+        <img src={logo} alt=""/>
       </Logo>
       {props.children}
     </Wrap>

@@ -1,5 +1,4 @@
 import React from "react"
-import ExtLink from "../components/export"
 import {Link} from "gatsby"
 import { slide as Menu } from 'react-burger-menu'
 import styled from "styled-components"

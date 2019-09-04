@@ -1,5 +1,5 @@
 import React from "react"
-import {Wrapper, ExtLink, Navigation, Bluebar, Socials, ImgCarousel} from "../components/export"
+import {Wrapper, Navigation, Socials} from "../components/export"
 import {Link} from "gatsby"
 import styled from "styled-components"
 import "../styles/global.css"
@@ -88,17 +88,7 @@ const Btn = styled.a`
     text-decoration-color: blue;
   }
 `
-const L = styled(Link)`
-  padding-left: ${textPadding};
-  font-size: 1.8em;
-  color: white;
-  text-decoration: none;
 
-  &:hover {
-    text-decoration: underline;
-    text-decoration-color: blue;
-  }
-`
 const Arrow = styled.img`
   width: 100px;
   padding-left: 2vw;
@@ -107,10 +97,6 @@ const Arrow = styled.img`
   margin-bottom: 0px;
 `
 
-const UL = styled.ul`
-  text-align: right;
-  list-style: none;
-`
 const L2 = styled(Link)`
   align-self: flex-end;
   margin-bottom: 0px;

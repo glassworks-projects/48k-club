@@ -1,5 +1,4 @@
 import React from "react"
-import styled from "styled-components"
 import {text, date} from "../text/blog-post-one.json"
 import acid from "../media/acid.png"
 import {BlogPost} from "../components/export"

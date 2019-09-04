@@ -2,11 +2,17 @@ var plugins = [{
       plugin: require('/Users/ryanglassman/code/48k-club/gatsby-site/node_modules/gatsby-plugin-styled-components/gatsby-ssr'),
       options: {"plugins":[]},
     },{
+      plugin: require('/Users/ryanglassman/code/48k-club/gatsby-site/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
+      options: {"plugins":[]},
+    },{
       plugin: require('/Users/ryanglassman/code/48k-club/gatsby-site/node_modules/gatsby-plugin-typography/gatsby-ssr'),
       options: {"plugins":[],"pathToConfigModule":"src/utils/typography","omitGoogleFont":true},
     },{
       plugin: require('/Users/ryanglassman/code/48k-club/gatsby-site/node_modules/gatsby-plugin-favicon/gatsby-ssr'),
       options: {"plugins":[],"logo":"./src/favicon.png"},
+    },{
+      plugin: require('/Users/ryanglassman/code/48k-club/gatsby-site/node_modules/gatsby-plugin-google-analytics/gatsby-ssr'),
+      options: {"plugins":[],"trackingId":"UA-100381317-1"},
     }]
 // During bootstrap, we write requires at top of this file which looks like:
 // var plugins = [

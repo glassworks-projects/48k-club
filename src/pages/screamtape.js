@@ -1,6 +1,5 @@
 import React from "react"
 import {ExtLink, ImgAbout} from "../components/export"
-import styled from "styled-components"
 import st from "../media/album-artwork/st.jpg"
 import {releasetext} from "../text/release-about.json"
 

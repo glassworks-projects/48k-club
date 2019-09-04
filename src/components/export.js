@@ -1,6 +1,3 @@
-import React from "react"
-import styled from "styled-components"
-import typography from "../utils/typography"
 import Wrapper from "../components/wrapper"
 import InLink from "../components/inlink"
 import ExtLink from "../components/extlink"

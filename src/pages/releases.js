@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import {Wrapper, Navigation, Bluebar, InLink, Socials} from "../components/export"
+import {Wrapper, Navigation, Bluebar, Socials} from "../components/export"
 import "../styles/global.css"
 import {Link} from "gatsby"
 import typography from "../utils/typography"

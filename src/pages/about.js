@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import {Wrapper, Navigation, Bluebar, ExtLink, Socials} from "../components/export"
+import {Wrapper, Navigation, Bluebar, Socials} from "../components/export"
 import "../styles/global.css"
 
 const BodyText = styled.div`

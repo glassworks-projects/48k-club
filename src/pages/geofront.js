@@ -1,9 +1,8 @@
 import React from "react"
 import {Link} from "gatsby"
-import {Wrapper, InLink, ExtLink, Navigation, Bluebar, Socials, Poster} from "../components/export"
+import {Wrapper, Navigation, Bluebar, Socials, Poster} from "../components/export"
 import styled from "styled-components"
 import "../styles/global.css"
-import { useSpring, animated } from 'react-spring'
 
 import first00    from "../media/posters/zero-layers/first00.png"
 import second00   from "../media/posters/zero-layers/second00.png"

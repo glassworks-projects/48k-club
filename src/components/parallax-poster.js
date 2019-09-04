@@ -20,7 +20,6 @@ const Card = styled(animated.div)`
 const trans1 = (x, y) => `translate3d(${x / 10}px,${y / 10}px,0)`
 const trans2 = (x, y) => `translate3d(${x / 8}px,${y / 8}px,0)`
 const trans3 = (x, y) => `translate3d(${x / 6}px,${y / 6}px,0)`
-const trans4 = (x, y) => `translate3d(${x / 3.5}px,${y / 3.5}px,0)`
 
 function Height() {
   return (typeof window !== `undefined`) ? (window.innerHeight / 2) : 800;
