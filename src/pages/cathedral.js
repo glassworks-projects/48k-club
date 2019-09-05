@@ -11,10 +11,10 @@ function Press() {
     <div style={{paddingLeft: `2vw`}}>
       <p>
         <h3 style={{fontWeight: `300`}}>Press: </h3>
-        <ExtLink href="https://www.tinymixtapes.com/chocolate-grinder/premiere-wild-kid-lapse" target="_blank">
+        <ExtLink href="https://www.tinymixtapes.com/chocolate-grinder/premiere-wild-kid-lapse">
           "Lapse" premiered at Tiny Mix Tapes
         </ExtLink> <br />
-        <ExtLink href="https://weareinsert.com/audio/premiere-wild-kid-cc-48k/" target="_blank">
+        <ExtLink href="https://weareinsert.com/audio/premiere-wild-kid-cc-48k/">
           "Cc" premiered at Insert
         </ExtLink>
       </p>

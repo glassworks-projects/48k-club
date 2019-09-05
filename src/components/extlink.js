@@ -16,7 +16,7 @@ const StyledLink = styled.a`
 
 export default function ExtLink(props) {
   return (
-    <StyledLink href={props.href} target="_blank">
+    <StyledLink href={props.href} target="_blank" rel="noopener">
       {props.children}
     </StyledLink>
   )

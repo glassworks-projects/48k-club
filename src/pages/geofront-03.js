@@ -54,21 +54,21 @@ export default class GF03 extends React.Component {
         text={[
           <p>Fourth installment <br /> May 10, 2019</p>,
           <p>Lineup: <br /> <br />
-            <ExtLink href="https://soundcloud.com/mobilegirl" target="_blank">
+            <ExtLink href="https://soundcloud.com/mobilegirl">
               Mobilegirl (Discwoman / Berlin)<br />
             </ExtLink>
-            <ExtLink href="https://soundcloud.com/nkc" target="_blank">
+            <ExtLink href="https://soundcloud.com/nkc">
               NKC (Her Records, Even The Strong / UK) <br />
             </ExtLink>
-            <ExtLink href="https://soundcloud.com/copout" target="_blank">
+            <ExtLink href="https://soundcloud.com/copout">
               Copout (PTP, 48k) <br />
             </ExtLink>
 
-            <ExtLink href="https://soundcloud.com/wild_kid" target="_blank">
+            <ExtLink href="https://soundcloud.com/wild_kid">
               Wild Kid (48k) <br />
             </ExtLink>
 
-            <ExtLink href="https://soundcloud.com/mmontepiedra" target="_blank">
+            <ExtLink href="https://soundcloud.com/mmontepiedra">
               Montepiedra (48k) <br />
             </ExtLink>
           </p>,

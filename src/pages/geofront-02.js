@@ -56,32 +56,32 @@ export default class GF02 extends React.Component {
         text={[
           <p>Third installment<br />December 07, 2018</p>,
           <p>Lineup: <br /> <br />
-            <ExtLink href="https://soundcloud.com/coucouchloe" target="_blank">
+            <ExtLink href="https://soundcloud.com/coucouchloe">
               coucou chloe (live) (NUXXE / London)<br />
             </ExtLink>
-            <ExtLink href="https://soundcloud.com/dis_fig" target="_blank">
+            <ExtLink href="https://soundcloud.com/dis_fig">
               Dis Fig (PTP / Berlin) <br />
             </ExtLink>
-            <ExtLink href="https://soundcloud.com/xglare" target="_blank">
+            <ExtLink href="https://soundcloud.com/xglare">
               XGLARE (live) (Blueberry Records) <br />
             </ExtLink>
 
-            <ExtLink href="https://soundcloud.com/copout" target="_blank">
+            <ExtLink href="https://soundcloud.com/copout">
               Copout (PTP, 48k) <br />
             </ExtLink>
 
-            <ExtLink href="https://soundcloud.com/wild_kid" target="_blank">
+            <ExtLink href="https://soundcloud.com/wild_kid">
               Wild Kid (live) (48k) <br />
             </ExtLink>
 
-            <ExtLink href="https://soundcloud.com/mmontepiedra" target="_blank">
+            <ExtLink href="https://soundcloud.com/mmontepiedra">
               Montepiedra (48k) <br />
             </ExtLink>
 
-            <ExtLink href="https://soundcloud.com/miraclesdj" target="_blank">
+            <ExtLink href="https://soundcloud.com/miraclesdj">
               Miracles
             </ExtLink> <br />
-            <ExtLink href="https://soundcloud.com/besharammusic" target="_blank">
+            <ExtLink href="https://soundcloud.com/besharammusic">
               Besharam
             </ExtLink> <br />
           </p>,

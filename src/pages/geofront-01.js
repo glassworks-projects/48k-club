@@ -50,38 +50,38 @@ export default class GF01 extends React.Component {
         text={[
           <p>Second installment<br />August 25, 2018</p>,
           <p>Lineup: <br /> <br />
-            <ExtLink href="https://soundcloud.com/gila-monsta" target="_blank">
+            <ExtLink href="https://soundcloud.com/gila-monsta">
               GILA (Lex Records / Denver)<br />
             </ExtLink>
-            <ExtLink href="https://soundcloud.com/freeeatlasttt" target="_blank">
+            <ExtLink href="https://soundcloud.com/freeeatlasttt">
               Free At Last
-            </ExtLink> w/ special guest <ExtLink href="https://soundcloud.com/crackstevens" target="_blank">
+            </ExtLink> w/ special guest <ExtLink href="https://soundcloud.com/crackstevens">
               Crackstevens<br />
             </ExtLink>
-            <ExtLink href="https://soundcloud.com/red_daughter" target="_blank">
+            <ExtLink href="https://soundcloud.com/red_daughter">
               Reddaughter <br />
             </ExtLink>
 
-            <ExtLink href="https://soundcloud.com/copout" target="_blank">
+            <ExtLink href="https://soundcloud.com/copout">
               Copout (PTP, 48k) <br />
             </ExtLink>
 
-            <ExtLink href="https://soundcloud.com/wild_kid" target="_blank">
+            <ExtLink href="https://soundcloud.com/wild_kid">
               Wild Kid (48k) <br />
             </ExtLink>
 
-            <ExtLink href="https://soundcloud.com/mmontepiedra" target="_blank">
+            <ExtLink href="https://soundcloud.com/mmontepiedra">
               Montepiedra (48k) <br />
             </ExtLink>
 
-            <ExtLink href="https://soundcloud.com/jukebouncewerk" target="_blank">
+            <ExtLink href="https://soundcloud.com/jukebouncewerk">
               Juke Bounce Werk
             </ExtLink> <span>presents: </span> <br />
-            <ExtLink href="https://soundcloud.com/kush_jones" target="_blank">Kush Jones, </ExtLink>
-            <ExtLink href="https://soundcloud.com/dj-swisha" target="_blank">DJ Swisha, </ExtLink>
-            <ExtLink href="https://soundcloud.com/losjbw" target="_blank">
+            <ExtLink href="https://soundcloud.com/kush_jones">Kush Jones, </ExtLink>
+            <ExtLink href="https://soundcloud.com/dj-swisha">DJ Swisha, </ExtLink>
+            <ExtLink href="https://soundcloud.com/losjbw">
             Los, </ExtLink>
-            <ExtLink href="https://soundcloud.com/scatta_jbw" target="_blank">
+            <ExtLink href="https://soundcloud.com/scatta_jbw">
               Scatta
             </ExtLink>
           </p>,
@@ -139,38 +139,38 @@ export default class GF01 extends React.Component {
 //         bodytext={[
 //           <p>Second installment<br />August 25, 2018</p>,
 //           <p>Lineup: <br /> <br />
-//             <ExtLink href="https://soundcloud.com/gila-monsta" target="_blank">
+//             <ExtLink href="https://soundcloud.com/gila-monsta" >
 //               GILA (Lex Records / Denver)<br />
 //             </ExtLink>
-//             <ExtLink href="https://soundcloud.com/freeeatlasttt" target="_blank">
+//             <ExtLink href="https://soundcloud.com/freeeatlasttt" >
 //               Free At Last
-//             </ExtLink> w/ special guest <ExtLink href="https://soundcloud.com/crackstevens" target="_blank">
+//             </ExtLink> w/ special guest <ExtLink href="https://soundcloud.com/crackstevens" >
 //               Crackstevens<br />
 //             </ExtLink>
-//             <ExtLink href="https://soundcloud.com/red_daughter" target="_blank">
+//             <ExtLink href="https://soundcloud.com/red_daughter" >
 //               Reddaughter <br />
 //             </ExtLink>
 //
-//             <ExtLink href="https://soundcloud.com/copout" target="_blank">
+//             <ExtLink href="https://soundcloud.com/copout" >
 //               Copout (PTP, 48k) <br />
 //             </ExtLink>
 //
-//             <ExtLink href="https://soundcloud.com/wild_kid" target="_blank">
+//             <ExtLink href="https://soundcloud.com/wild_kid" >
 //               Wild Kid (48k) <br />
 //             </ExtLink>
 //
-//             <ExtLink href="https://soundcloud.com/mmontepiedra" target="_blank">
+//             <ExtLink href="https://soundcloud.com/mmontepiedra" >
 //               Montepiedra (48k) <br />
 //             </ExtLink>
 //
-//             <ExtLink href="https://soundcloud.com/jukebouncewerk" target="_blank">
+//             <ExtLink href="https://soundcloud.com/jukebouncewerk" >
 //               Juke Bounce Werk
 //             </ExtLink> <span>presents: </span>
-//             <ExtLink href="https://soundcloud.com/kush_jones" target="_blank">Kush Jones, </ExtLink>
-//             <ExtLink href="https://soundcloud.com/dj-swisha" target="_blank">DJ Swisha, </ExtLink>
-//             <ExtLink href="https://soundcloud.com/losjbw" target="_blank">
+//             <ExtLink href="https://soundcloud.com/kush_jones" >Kush Jones, </ExtLink>
+//             <ExtLink href="https://soundcloud.com/dj-swisha" >DJ Swisha, </ExtLink>
+//             <ExtLink href="https://soundcloud.com/losjbw" >
 //             Los, </ExtLink>
-//             <ExtLink href="https://soundcloud.com/scatta_jbw" target="_blank">
+//             <ExtLink href="https://soundcloud.com/scatta_jbw" >
 //               Scatta
 //             </ExtLink>
 //           </p>,

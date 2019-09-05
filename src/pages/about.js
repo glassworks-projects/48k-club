@@ -60,7 +60,7 @@ export default class About extends React.Component {
 
   render () {
     return (
-      <Wrapper>
+      <Wrapper title="About">
         <Navigation />
         <Bluebar name="ABOUT" />
         <Socials sidebar={true} color="blue" />

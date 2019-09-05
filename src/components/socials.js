@@ -24,7 +24,9 @@ function Icon (props) {
         width: `35px`,
         cursor: `inherit`,
       }}
-    target= "_blank"/>
+      target= "_blank"
+      rel="noopener"
+    />
   )
 }
 

@@ -148,7 +148,7 @@ export default function ImgAbout (props) {
             </SVG>
             <P>{props.text}</P>
             <div>{props.anythingElse}</div>
-            {!(props.gf) && <Btn href={props.href} target="_blank">Stream / Buy</Btn>}
+            {!(props.gf) && <Btn href={props.href} target="_blank" rel="noopener">Stream / Buy</Btn>}
             {!props.gf && <br/>}
           </Textbox>
           <Socials color="blue"/>

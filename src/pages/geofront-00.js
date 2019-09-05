@@ -48,19 +48,19 @@ export default class GF00 extends React.Component {
         text={[
           <p>First installment<br />May 19, 2018</p>,
           <p>Lineup: <br /> <br />
-            <ExtLink href="https://soundcloud.com/inkke" target="_blank">
+            <ExtLink href="https://soundcloud.com/inkke">
               Inkke (LuckyMe / Glasgow)<br />
             </ExtLink>
-            <ExtLink href="https://soundcloud.com/djdelish" target="_blank">
+            <ExtLink href="https://soundcloud.com/djdelish">
               DJ Delish (Sweat Equity / Philadelphia)<br />
             </ExtLink>
-            <ExtLink href="https://soundcloud.com/copout" target="_blank">
+            <ExtLink href="https://soundcloud.com/copout">
               Copout (PTP, 48k) <br />
             </ExtLink>
-            <ExtLink href="https://soundcloud.com/wild_kid" target="_blank">
+            <ExtLink href="https://soundcloud.com/wild_kid">
               Wild Kid (48k) <br />
             </ExtLink>
-            <ExtLink href="https://soundcloud.com/mmontepiedra" target="_blank">
+            <ExtLink href="https://soundcloud.com/mmontepiedra">
               Montepiedra (48k)
             </ExtLink>
           </p>,
@@ -120,19 +120,19 @@ export default class GF00 extends React.Component {
 //         bodytext={[
 //           <p>First installment<br />May 19, 2018</p>,
 //           <p>Lineup: <br /> <br />
-//             <ExtLink href="https://soundcloud.com/inkke" target="_blank">
+//             <ExtLink href="https://soundcloud.com/inkke">
 //               Inkke (LuckyMe / Glasgow)<br />
 //             </ExtLink>
-//             <ExtLink href="https://soundcloud.com/djdelish" target="_blank">
+//             <ExtLink href="https://soundcloud.com/djdelish">
 //               DJ Delish (Sweat Equity / Philadelphia)<br />
 //             </ExtLink>
-//             <ExtLink href="https://soundcloud.com/copout" target="_blank">
+//             <ExtLink href="https://soundcloud.com/copout">
 //               Copout (PTP, 48k) <br />
 //             </ExtLink>
-//             <ExtLink href="https://soundcloud.com/wild_kid" target="_blank">
+//             <ExtLink href="https://soundcloud.com/wild_kid">
 //               Wild Kid (48k) <br />
 //             </ExtLink>
-//             <ExtLink href="https://soundcloud.com/mmontepiedra" target="_blank">
+//             <ExtLink href="https://soundcloud.com/mmontepiedra">
 //               Montepiedra (48k)
 //             </ExtLink>
 //           </p>,

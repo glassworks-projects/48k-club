@@ -8,7 +8,7 @@ function Press() {
     <div style={{paddingLeft: `2vw`}}>
       <p>
         <h3 style={{fontWeight: `300`}}>Press: </h3>
-        <ExtLink href="https://djmag.com/music/bass/formless" target="_blank">
+        <ExtLink href="https://djmag.com/music/bass/formless">
           7.5/10 in DJ Mag
         </ExtLink>
       </p>

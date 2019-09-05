@@ -53,11 +53,11 @@ export default function Wrapper (props) {
       <Helmet>
         <TypographyStyle typography={typography} />
         {/* <Title title={props.title}/> */}
-        <meta property="og:title" content={props.title} />
-        <meta property="og:image" content={preview} />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://48k.club" />
-        <meta property="og:description" content="A record label and multimedia collective. NYC/Global." />
+        <title>{props.title}</title>
+        <meta name="image" content={preview} />
+        <meta name="type" content="website" />
+        <meta name="url" content="https://48k.club" />
+        <meta name="description" content="A record label and multimedia collective. NYC/Global." />
       </Helmet>
       <Logo to="" style={{cursor: `inherit`}}>
         <img src={logo} alt=""/>

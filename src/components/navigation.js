@@ -104,7 +104,7 @@ function Ham() {
         <BurgerLi><NavLink to="">BLOG</NavLink></BurgerLi>
         <BurgerLi><NavLink to="releases">RELEASES</NavLink></BurgerLi>
         <BurgerLi>
-          <ExtNavLink href="https://48ksps.bigcartel.com" target="_blank">STORE</ExtNavLink>
+          <ExtNavLink href="https://48ksps.bigcartel.com" target="_blank" rel="noopener">STORE</ExtNavLink>
         </BurgerLi>
         <BurgerLi><NavLink to="geofront">GEOFRONT</NavLink></BurgerLi>
         <BurgerLi><NavLink to="offpeak">OFF PEAK</NavLink></BurgerLi>
@@ -130,7 +130,15 @@ export default function Navigation () {
       <Li><NavLink to="releases">RELEASES</NavLink></Li>
       <Li><NavLink to="geofront">GEOFRONT</NavLink></Li>
       <Li><NavLink to="offpeak">OFF PEAK</NavLink></Li>
-      <Li><ExtNavLink href="https://48ksps.bigcartel.com" target="_blank">STORE</ExtNavLink></Li>
+      <Li>
+        <ExtNavLink
+          href="https://48ksps.bigcartel.com"
+          target="_blank"
+          rel="noopener"
+        >
+          STORE
+        </ExtNavLink>
+      </Li>
       <Li><NavLink to="about">ABOUT</NavLink></Li>
     </Nav>
   )
