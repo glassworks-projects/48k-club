@@ -49,6 +49,7 @@ export default class Formless extends React.Component {
     return(
       <ImgAbout
         gf={false}
+        artistLink="https://soundcloud.com/wild_kid"
         title="48K003 - Wild Kid - Formless"
         img={formless}
         heading= "WILD KID"

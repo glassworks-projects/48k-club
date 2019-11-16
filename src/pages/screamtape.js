@@ -64,6 +64,7 @@ export default class ScreamTape extends React.Component {
     return(
       <ImgAbout
         gf={false}
+        artistLink="https://soundcloud.com/wild_kid"
         title="48K002 - Wild Kid - Scream Tape"
         img={st}
         heading = "WILD KID"

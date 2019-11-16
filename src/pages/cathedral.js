@@ -54,6 +54,7 @@ export default class Cathedral extends React.Component {
   render() {
     return(
       <ImgAbout
+        artistLink="https://soundcloud.com/wild_kid"
         gf={false}
         title="48K001 - Wild Kid - Cathdedral"
         img={cathedral}

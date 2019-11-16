@@ -1,5 +1,5 @@
 import React from "react"
-import {Wrapper, Navigation, Socials} from "../components/export"
+import {Wrapper, Navigation, Socials, ExtLink} from "../components/export"
 import {Link} from "gatsby"
 import styled from "styled-components"
 import "../styles/global.css"
@@ -139,7 +139,8 @@ export default function ImgAbout (props) {
             <Cover src={props.img} alt="album artwork"/>
           }
           <Textbox>
-            <H2>{props.heading}</H2>
+            {props.gf ? <H2>{props.heading}</H2> : 
+            <ExtLink href={props.artistLink}><H2>{props.heading}</H2></ExtLink>}
             <H1>{props.subheading}</H1>
             <SVG>
               <line x1="0" y1="0" x2="200" y2="0"
