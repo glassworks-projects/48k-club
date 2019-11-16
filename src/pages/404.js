@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import {Wrapper, Navigation, Bluebar, Socials, InLink} from "../components/export"
+import {Wrapper, Navigation} from "../components/export"
 import "../styles/global.css"
 
 const Box = styled.div`

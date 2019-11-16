@@ -5,9 +5,9 @@ const preferDefault = m => m && m.default || m
 
 
 exports.components = {
-  "component---cache-dev-404-page-js": hot(preferDefault(require("/Users/ryanglassman/code/48k-club/gatsby-site/.cache/dev-404-page.js"))),
   "component---src-pages-404-js": hot(preferDefault(require("/Users/ryanglassman/code/48k-club/gatsby-site/src/pages/404.js"))),
   "component---src-pages-about-js": hot(preferDefault(require("/Users/ryanglassman/code/48k-club/gatsby-site/src/pages/about.js"))),
+  "component---src-pages-bitl-js": hot(preferDefault(require("/Users/ryanglassman/code/48k-club/gatsby-site/src/pages/bitl.js"))),
   "component---src-pages-cathedral-js": hot(preferDefault(require("/Users/ryanglassman/code/48k-club/gatsby-site/src/pages/cathedral.js"))),
   "component---src-pages-formless-js": hot(preferDefault(require("/Users/ryanglassman/code/48k-club/gatsby-site/src/pages/formless.js"))),
   "component---src-pages-geofront-00-js": hot(preferDefault(require("/Users/ryanglassman/code/48k-club/gatsby-site/src/pages/geofront-00.js"))),
@@ -20,7 +20,6 @@ exports.components = {
   "component---src-pages-memory-ha-js": hot(preferDefault(require("/Users/ryanglassman/code/48k-club/gatsby-site/src/pages/memory-ha.js"))),
   "component---src-pages-offpeak-js": hot(preferDefault(require("/Users/ryanglassman/code/48k-club/gatsby-site/src/pages/offpeak.js"))),
   "component---src-pages-releases-js": hot(preferDefault(require("/Users/ryanglassman/code/48k-club/gatsby-site/src/pages/releases.js"))),
-  "component---src-pages-screamtape-js": hot(preferDefault(require("/Users/ryanglassman/code/48k-club/gatsby-site/src/pages/screamtape.js"))),
-  "component---src-pages-bitl-js": hot(preferDefault(require("/Users/ryanglassman/code/48k-club/gatsby-site/src/pages/bitl.js")))
+  "component---src-pages-screamtape-js": hot(preferDefault(require("/Users/ryanglassman/code/48k-club/gatsby-site/src/pages/screamtape.js")))
 }
 
