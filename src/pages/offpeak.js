@@ -91,6 +91,11 @@ export default class OffPeak extends React.Component {
               Click on the installments below to read the interviews and hear the playlists.
             </Description>
             <Nav>
+            <LI>
+                <ExtLink href="https://weareinsert.com/textual/off-peak-nicole-ruggiero/">
+                  NICOLE RUGGIERO
+                </ExtLink>
+              </LI>
               <LI>
                 <ExtLink href="https://weareinsert.com/textual/off-peak-free-at-last/">
                   FREE AT LAST
