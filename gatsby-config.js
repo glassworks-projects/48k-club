@@ -10,9 +10,9 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-plugin-favicon`,
+      resolve: `gatsby-plugin-manifest`,
       options: {
-        logo: "./src/favicon.png",
+        icon: "./src/favicon.png",
       }
     },
     {
