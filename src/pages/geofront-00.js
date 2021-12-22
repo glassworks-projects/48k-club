@@ -57,7 +57,7 @@ export default class GF00 extends React.Component {
             <ExtLink href="https://soundcloud.com/copout">
               Copout (PTP, 48k) <br />
             </ExtLink>
-            <ExtLink href="https://soundcloud.com/wild_kid">
+            <ExtLink href="https://soundcloud.com/adder48k">
               Wild Kid (48k) <br />
             </ExtLink>
             <ExtLink href="https://soundcloud.com/mmontepiedra">
@@ -129,7 +129,7 @@ export default class GF00 extends React.Component {
 //             <ExtLink href="https://soundcloud.com/copout">
 //               Copout (PTP, 48k) <br />
 //             </ExtLink>
-//             <ExtLink href="https://soundcloud.com/wild_kid">
+//             <ExtLink href="https://soundcloud.com/adder48k">
 //               Wild Kid (48k) <br />
 //             </ExtLink>
 //             <ExtLink href="https://soundcloud.com/mmontepiedra">

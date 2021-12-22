@@ -70,7 +70,7 @@ export default class GF02 extends React.Component {
               Copout (PTP, 48k) <br />
             </ExtLink>
 
-            <ExtLink href="https://soundcloud.com/wild_kid">
+            <ExtLink href="https://soundcloud.com/adder48k">
               Wild Kid (live) (48k) <br />
             </ExtLink>
 
@@ -78,7 +78,7 @@ export default class GF02 extends React.Component {
               Montepiedra (48k) <br />
             </ExtLink>
 
-            <ExtLink href="https://soundcloud.com/miraclesdj">
+            <ExtLink href="https://soundcloud.com/miraclestew">
               Miracles
             </ExtLink> <br />
             <ExtLink href="https://soundcloud.com/besharammusic">
@@ -159,7 +159,7 @@ export default class GF02 extends React.Component {
 //               Copout (PTP, 48k) <br />
 //             </ExtLink>
 //
-//             <ExtLink href="https://soundcloud.com/wild_kid" target="_blank">
+//             <ExtLink href="https://soundcloud.com/adder48k" target="_blank">
 //               Wild Kid (live) (48k) <br />
 //             </ExtLink>
 //

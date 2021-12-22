@@ -27,7 +27,9 @@ try {
 Html = Html && Html.__esModule ? Html.default : Html
 
 export default (pagePath, callback) => {
-  let headComponents = []
+  let headComponents = [
+    <meta key="environment" name="note" content="environment=development" />,
+  ]
   let htmlAttributes = {}
   let bodyAttributes = {}
   let preBodyComponents = []
@@ -107,6 +109,7 @@ export default (pagePath, callback) => {
     bodyAttributes,
     preBodyComponents,
     postBodyComponents: postBodyComponents.concat([
+      <script key={`polyfill`} src="/polyfill.js" noModule={true} />,
       <script key={`commons`} src="/commons.js" />,
     ]),
   })

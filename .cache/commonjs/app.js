@@ -8,6 +8,8 @@ var _reactDom = _interopRequireDefault(require("react-dom"));
 
 var _domready = _interopRequireDefault(require("@mikaelkristiansson/domready"));
 
+var _socket = _interopRequireDefault(require("socket.io-client"));
+
 var _socketIo = _interopRequireDefault(require("./socketIo"));
 
 var _emitter = _interopRequireDefault(require("./emitter"));
@@ -18,15 +20,16 @@ var _loader = require("./loader");
 
 var _devLoader = _interopRequireDefault(require("./dev-loader"));
 
-var _syncRequires = _interopRequireDefault(require("./sync-requires"));
+var _syncRequires = _interopRequireDefault(require("$virtual/sync-requires"));
 
-var _matchPaths = _interopRequireDefault(require("./match-paths.json"));
+var _matchPaths = _interopRequireDefault(require("$virtual/match-paths.json"));
 
 // Generated during bootstrap
 window.___emitter = _emitter.default;
 const loader = new _devLoader.default(_syncRequires.default, _matchPaths.default);
 (0, _loader.setLoader)(loader);
-loader.setApiRunner(_apiRunnerBrowser.apiRunner); // Let the site/plugins run code very early.
+loader.setApiRunner(_apiRunnerBrowser.apiRunner);
+window.___loader = _loader.publicLoader; // Let the site/plugins run code very early.
 
 (0, _apiRunnerBrowser.apiRunnerAsync)(`onClientEntry`).then(() => {
   // Hook up the client to socket.io on server
@@ -37,6 +40,29 @@ loader.setApiRunner(_apiRunnerBrowser.apiRunner); // Let the site/plugins run co
       window.location.reload();
     });
   }
+
+  fetch(`/___services`).then(res => res.json()).then(services => {
+    if (services.developstatusserver) {
+      const parentSocket = (0, _socket.default)(`http://${window.location.hostname}:${services.developstatusserver.port}`);
+      parentSocket.on(`develop:needs-restart`, msg => {
+        if (window.confirm(`The develop process needs to be restarted for the changes to ${msg.dirtyFile} to be applied.\nDo you want to restart the develop process now?`)) {
+          parentSocket.once(`develop:is-starting`, msg => {
+            window.location.reload();
+          });
+          parentSocket.once(`develop:started`, msg => {
+            window.location.reload();
+          });
+          parentSocket.emit(`develop:restart`);
+        }
+      }); // Prevents certain browsers spamming XHR 'ERR_CONNECTION_REFUSED'
+      // errors within the console, such as when exiting the develop process.
+
+      parentSocket.on(`disconnect`, () => {
+        console.warn(`[socket.io] Disconnected. Unable to perform health-check.`);
+        parentSocket.close();
+      });
+    }
+  });
   /**
    * Service Workers are persistent by nature. They stick around,
    * serving a cached version of the site if they aren't removed.
@@ -45,7 +71,6 @@ loader.setApiRunner(_apiRunnerBrowser.apiRunner); // Let the site/plugins run co
    *
    * Let's warn if we find service workers in development.
    */
-
 
   if (`serviceWorker` in navigator) {
     navigator.serviceWorker.getRegistrations().then(registrations => {
@@ -60,7 +85,7 @@ loader.setApiRunner(_apiRunnerBrowser.apiRunner); // Let the site/plugins run co
 
     let Root = preferDefault(require(`./root`));
     (0, _domready.default)(() => {
-      renderer(_react.default.createElement(Root, null), rootElement, () => {
+      renderer( /*#__PURE__*/_react.default.createElement(Root, null), rootElement, () => {
         (0, _apiRunnerBrowser.apiRunner)(`onInitialClientRender`);
       });
     });

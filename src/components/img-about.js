@@ -122,7 +122,7 @@ export default function ImgAbout (props) {
       <body>
         <Navigation />
         <Container>
-          <L2 to={props.gf ? 'geofront' : 'releases'}>
+          <L2 to={props.gf ? '/geofront' : '/releases'}>
             <Arrow src={require("../media/arrow.png")} alt="back arrow"/>
           </L2>
           {props.gf ?

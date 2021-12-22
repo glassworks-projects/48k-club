@@ -58,7 +58,7 @@ export default class MemoryHa extends React.Component {
   render() {
     return(
       <ImgAbout
-        artistLink="https://miraclesdj.com/"
+        artistLink="https://soundcloud.com/miraclestew/"
         gf={false}
         title="48K005 - Miracles - Memory Ha"
         img={memoryha}

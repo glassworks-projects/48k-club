@@ -1,9 +1,10 @@
 import { apiRunner, apiRunnerAsync } from "./api-runner-browser"
 import React from "react"
 import ReactDOM from "react-dom"
-import { Router, navigate, Location } from "@reach/router"
+import { Router, navigate, Location, BaseContext } from "@reach/router"
 import { ScrollContext } from "gatsby-react-router-scroll"
 import domReady from "@mikaelkristiansson/domready"
+import { StaticQueryContext } from "gatsby"
 import {
   shouldUpdateScroll,
   init as navigationInit,
@@ -11,13 +12,19 @@ import {
 } from "./navigation"
 import emitter from "./emitter"
 import PageRenderer from "./page-renderer"
-import asyncRequires from "./async-requires"
-import { setLoader, ProdLoader } from "./loader"
+import asyncRequires from "$virtual/async-requires"
+import {
+  setLoader,
+  ProdLoader,
+  publicLoader,
+  PageResourceStatus,
+  getStaticQueryResults,
+} from "./loader"
 import EnsureResources from "./ensure-resources"
 import stripPrefix from "./strip-prefix"
 
 // Generated during bootstrap
-import matchPaths from "./match-paths.json"
+import matchPaths from "$virtual/match-paths.json"
 
 const loader = new ProdLoader(asyncRequires, matchPaths)
 setLoader(loader)
@@ -25,8 +32,7 @@ loader.setApiRunner(apiRunner)
 
 window.asyncRequires = asyncRequires
 window.___emitter = emitter
-window.___loader = loader
-window.___webpackCompilationHash = window.webpackCompilationHash
+window.___loader = publicLoader
 
 navigationInit()
 
@@ -37,11 +43,55 @@ apiRunnerAsync(`onClientEntry`).then(() => {
     require(`./register-service-worker`)
   }
 
+  // In gatsby v2 if Router is used in page using matchPaths
+  // paths need to contain full path.
+  // For example:
+  //   - page have `/app/*` matchPath
+  //   - inside template user needs to use `/app/xyz` as path
+  // Resetting `basepath`/`baseuri` keeps current behaviour
+  // to not introduce breaking change.
+  // Remove this in v3
+  const RouteHandler = props => (
+    <BaseContext.Provider
+      value={{
+        baseuri: `/`,
+        basepath: `/`,
+      }}
+    >
+      <PageRenderer {...props} />
+    </BaseContext.Provider>
+  )
+
+  const DataContext = React.createContext({})
+
+  class GatsbyRoot extends React.Component {
+    render() {
+      const { children } = this.props
+      return (
+        <Location>
+          {({ location }) => (
+            <EnsureResources location={location}>
+              {({ pageResources, location }) => {
+                const staticQueryResults = getStaticQueryResults()
+                return (
+                  <StaticQueryContext.Provider value={staticQueryResults}>
+                    <DataContext.Provider value={{ pageResources, location }}>
+                      {children}
+                    </DataContext.Provider>
+                  </StaticQueryContext.Provider>
+                )
+              }}
+            </EnsureResources>
+          )}
+        </Location>
+      )
+    }
+  }
+
   class LocationHandler extends React.Component {
     render() {
-      let { location } = this.props
       return (
-        <EnsureResources location={location}>
+        <DataContext.Consumer>
           {({ pageResources, location }) => (
             <RouteUpdates location={location}>
               <ScrollContext
@@ -53,12 +103,14 @@ apiRunnerAsync(`onClientEntry`).then(() => {
                   location={location}
                   id="gatsby-focus-wrapper"
                 >
-                  <PageRenderer
+                  <RouteHandler
                     path={
                       pageResources.page.path === `/404.html`
-                        ? location.pathname
-                        : pageResources.page.matchPath ||
-                          pageResources.page.path
+                        ? stripPrefix(location.pathname, __BASE_PATH__)
+                        : encodeURI(
+                            pageResources.page.matchPath ||
+                              pageResources.page.path
+                          )
                     }
                     {...this.props}
                     location={location}
@@ -69,7 +121,7 @@ apiRunnerAsync(`onClientEntry`).then(() => {
               </ScrollContext>
             </RouteUpdates>
           )}
-        </EnsureResources>
+        </DataContext.Consumer>
       )
     }
   }
@@ -87,9 +139,7 @@ apiRunnerAsync(`onClientEntry`).then(() => {
     pagePath &&
     __BASE_PATH__ + pagePath !== browserLoc.pathname &&
     !(
-      loader.pathFinder.findMatchPath(
-        stripPrefix(browserLoc.pathname, __BASE_PATH__)
-      ) ||
+      loader.findMatchPath(stripPrefix(browserLoc.pathname, __BASE_PATH__)) ||
       pagePath === `/404.html` ||
       pagePath.match(/^\/404\/?$/) ||
       pagePath.match(/^\/offline-plugin-app-shell-fallback\/?$/)
@@ -100,30 +150,25 @@ apiRunnerAsync(`onClientEntry`).then(() => {
     })
   }
 
-  loader.loadPage(browserLoc.pathname).then(page => {
-    if (!page || page.status === `error`) {
+  publicLoader.loadPage(browserLoc.pathname).then(page => {
+    if (!page || page.status === PageResourceStatus.Error) {
       throw new Error(
-        `page resources for ${
-          browserLoc.pathname
-        } not found. Not rendering React`
+        `page resources for ${browserLoc.pathname} not found. Not rendering React`
       )
     }
-    const Root = () => (
-      <Location>
-        {locationContext => <LocationHandler {...locationContext} />}
-      </Location>
-    )
 
-    const WrappedRoot = apiRunner(
+    window.___webpackCompilationHash = page.page.webpackCompilationHash
+
+    const SiteRoot = apiRunner(
       `wrapRootElement`,
-      { element: <Root /> },
-      <Root />,
+      { element: <LocationHandler /> },
+      <LocationHandler />,
       ({ result }) => {
         return { element: result }
       }
     ).pop()
 
-    let NewRoot = () => WrappedRoot
+    const App = () => <GatsbyRoot>{SiteRoot}</GatsbyRoot>
 
     const renderer = apiRunner(
       `replaceHydrateFunction`,
@@ -133,7 +178,7 @@ apiRunnerAsync(`onClientEntry`).then(() => {
 
     domReady(() => {
       renderer(
-        <NewRoot />,
+        <App />,
         typeof window !== `undefined`
           ? document.getElementById(`___gatsby`)
           : void 0,

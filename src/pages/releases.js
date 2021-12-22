@@ -82,7 +82,28 @@ export default class Releases extends React.Component {
           <Bluebar name="RELEASES" />
 
           <Titles>
-            <L to="memory-ha">
+          <L to="/eva-arp2">
+              <Entry>48KS004
+                {Wide() ? <Spacer>——————————————————</Spacer> : <br />}  
+                {Wide() ? <span>&nbsp;Wild Kid - EVA.ARP2</span> : 
+                <span>Wild Kid <br />EVA.ARP2</span>}
+                </Entry>
+              </L>
+          <L to="/extremely-naive">
+              <Entry>48KS003 
+                {Wide() ? <Spacer>——————————————————</Spacer> : <br />}  
+                {Wide() ? <span>&nbsp;Adder - Extremely Naïve</span> : 
+                <span>Adder <br />Extremely Naïve</span>}
+                </Entry>
+              </L>
+          <L to="/meadow-cycles">
+              <Entry>48KS002 
+                {Wide() ? <Spacer>———————————————</Spacer> : <br />}  
+                {Wide() ? <span>&nbsp;Callosum - Meadow Cycles</span> : 
+                <span>Callosum <br />Meadow Cycles</span>}
+                </Entry>
+              </L>
+            <L to="/memory-ha">
               <Entry>48K005 
                 {Wide() ? <Spacer>—————————————————</Spacer> : <br />}  
                 {Wide() ? <span>&nbsp;Miracles - Memory Ha</span> : 
@@ -90,7 +111,7 @@ export default class Releases extends React.Component {
                 </Entry>
               </L>
 
-            <L to="bitl">
+            <L to="/bitl">
               <Entry>48K004 
                 {Wide() ? <Spacer>———————</Spacer> : <br />}
                 {Wide() ? <span>&nbsp;ADORE ADORE - Break In The Line</span> : 
@@ -98,26 +119,26 @@ export default class Releases extends React.Component {
                 }
                 </Entry>
                 </L>
-            <L to="formless">
+            <L to="/formless">
               <Entry>48K003 
                 {Wide() ? <Spacer>————————————</Spacer> : <br />}
                 {Wide()? <span>&nbsp;Wild Kid - Formless</span> : <span>Wild Kid <br />Formless</span>}
                 </Entry>
                 </L>
-            <L to="screamtape">
+            <L to="/screamtape">
               <Entry>48K002
                 {Wide() ? <Spacer>—————————————————</Spacer> : <br />}
                 {Wide() ? <span>&nbsp;Wild Kid - Scream Tape</span> : <span> Wild Kid <br />Scream Tape</span>}
                 </Entry>
                 </L>
-            <L to="lapse">
+            <L to="/lapse">
               <Entry>48KS001
                 {Wide() ? <Spacer>————————————</Spacer> : <br />}
                 {Wide() ? <span>&nbsp;Wild Kid - Lapse (Miracles Remix)</span> :
                 <span>Wild Kid <br />Lapse (Miracles Remix)</span>}
                 </Entry>
                 </L>
-            <L to="cathedral">
+            <L to="/cathedral">
               <Entry>48K001
                 {Wide() ? <Spacer>———————————</Spacer> : <br />}
                 {Wide() ? <span>&nbsp;Wild Kid - Cathedral</span> : 

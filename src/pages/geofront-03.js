@@ -64,7 +64,7 @@ export default class GF03 extends React.Component {
               Copout (PTP, 48k) <br />
             </ExtLink>
 
-            <ExtLink href="https://soundcloud.com/wild_kid">
+            <ExtLink href="https://soundcloud.com/adder48k">
               Wild Kid (48k) <br />
             </ExtLink>
 
@@ -146,7 +146,7 @@ export default class GF03 extends React.Component {
 //               Copout (PTP, 48k) <br />
 //             </ExtLink>
 //
-//             <ExtLink href="https://soundcloud.com/wild_kid" target="_blank">
+//             <ExtLink href="https://soundcloud.com/adder48k" target="_blank">
 //               Wild Kid (48k) <br />
 //             </ExtLink>
 //

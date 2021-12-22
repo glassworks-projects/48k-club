@@ -46,15 +46,15 @@ function socketIo() {
         socket.on(`message`, msg => {
           if (msg.type === `staticQueryResult`) {
             if (didDataChange(msg, staticQueryData)) {
-              staticQueryData = Object.assign({}, staticQueryData, {
+              staticQueryData = { ...staticQueryData,
                 [msg.payload.id]: msg.payload.result
-              });
+              };
             }
           } else if (msg.type === `pageQueryResult`) {
             if (didDataChange(msg, pageQueryData)) {
-              pageQueryData = Object.assign({}, pageQueryData, {
+              pageQueryData = { ...pageQueryData,
                 [(0, _normalizePagePath.default)(msg.payload.id)]: msg.payload.result
-              });
+              };
             }
           } else if (msg.type === `overlayError`) {
             if (msg.payload.message) {
@@ -67,6 +67,12 @@ function socketIo() {
           if (msg.type && msg.payload) {
             ___emitter.emit(msg.type, msg.payload);
           }
+        }); // Prevents certain browsers spamming XHR 'ERR_CONNECTION_REFUSED'
+        // errors within the console, such as when exiting the develop process.
+
+        socket.on(`disconnect`, () => {
+          console.warn(`[socket.io] Disconnected from dev server.`);
+          socket.close();
         });
       } catch (err) {
         console.error(`Could not connect to socket.io on dev server.`);

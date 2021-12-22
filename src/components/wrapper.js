@@ -59,7 +59,7 @@ export default function Wrapper (props) {
         <meta name="url" content="https://48k.club" />
         <meta name="description" content="A record label and multimedia collective. NYC/Global." />
       </Helmet>
-      <Logo to="" style={{cursor: `inherit`}}>
+      <Logo to="/" style={{cursor: `inherit`}}>
         <img src={logo} alt=""/>
       </Logo>
       {props.children}

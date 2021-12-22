@@ -102,13 +102,13 @@ function Ham() {
     <Menu styles={styles} width="100%">
       <ul>
         <BurgerLi><NavLink to="">BLOG</NavLink></BurgerLi>
-        <BurgerLi><NavLink to="releases">RELEASES</NavLink></BurgerLi>
+        <BurgerLi><NavLink to="/releases">RELEASES</NavLink></BurgerLi>
         <BurgerLi>
           <ExtNavLink href="https://48ksps.bigcartel.com" target="_blank" rel="noopener">STORE</ExtNavLink>
         </BurgerLi>
-        <BurgerLi><NavLink to="geofront">GEOFRONT</NavLink></BurgerLi>
-        <BurgerLi><NavLink to="offpeak">OFF PEAK</NavLink></BurgerLi>
-        <BurgerLi><NavLink to="about">ABOUT</NavLink></BurgerLi>
+        <BurgerLi><NavLink to="/geofront">GEOFRONT</NavLink></BurgerLi>
+        <BurgerLi><NavLink to="/offpeak">OFF PEAK</NavLink></BurgerLi>
+        <BurgerLi><NavLink to="/about">ABOUT</NavLink></BurgerLi>
       </ul>
     </Menu>
   )
@@ -126,10 +126,10 @@ export default function Navigation () {
     <Ham />
     :
     <Nav>
-      <Li><NavLink to="">BLOG</NavLink></Li>
-      <Li><NavLink to="releases">RELEASES</NavLink></Li>
-      <Li><NavLink to="geofront">GEOFRONT</NavLink></Li>
-      <Li><NavLink to="offpeak">OFF PEAK</NavLink></Li>
+      {/* <Li><NavLink to="">BLOG</NavLink></Li> */}
+      <Li><NavLink to="/releases">RELEASES</NavLink></Li>
+      <Li><NavLink to="/geofront">GEOFRONT</NavLink></Li>
+      <Li><NavLink to="/offpeak">OFF PEAK</NavLink></Li>
       <Li>
         <ExtNavLink
           href="https://48ksps.bigcartel.com"
@@ -139,7 +139,7 @@ export default function Navigation () {
           STORE
         </ExtNavLink>
       </Li>
-      <Li><NavLink to="about">ABOUT</NavLink></Li>
+      <Li><NavLink to="/about">ABOUT</NavLink></Li>
     </Nav>
   )
 }

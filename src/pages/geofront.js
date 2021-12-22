@@ -16,6 +16,9 @@ import third02    from "../media/posters/two-layers/third02.png"
 import first03    from "../media/posters/three-layers/first03.png"
 import second03   from "../media/posters/three-layers/second03.png"
 import third03    from "../media/posters/three-layers/third03.png"
+import first04    from "../media/posters/four-layers/first04.png"
+import second04   from "../media/posters/four-layers/second04.png"
+import third04    from "../media/posters/four-layers/third04.png"
 
 const Scroll = styled.div`
   height: 1200px;
@@ -47,17 +50,20 @@ function Floats() {
   return (
     <div>
       <Scroll>
-        <Link to="geofront-02">
-          <Poster first={first02} second={second02} third={third02} top={200} left={550} />
+        <Link to="/geofront-02">
+          <Poster first={first02} second={second02} third={third02} top={700} left={110} />
         </Link>
-        <Link to="geofront-00">
-          <Poster first={first00} second={second00} third={third00} top={100} left={100} />
+        <Link to="/geofront-00">
+          <Poster first={first00} second={second00} third={third00} top={1400} left={250} />
         </Link>
-        <Link to="geofront-03">
-          <Poster first={first03} second={second03} third={third03} top={750} left={700}/>
+        <Link to="/geofront-03">
+          <Poster first={first03} second={second03} third={third03} top={200} left={650}/>
         </Link>
-        <Link to="geofront-01">
-          <Poster first={first01} second={second01} third={third01} top={800} left={110}/>
+        <Link to="/geofront-01">
+          <Poster first={first01} second={second01} third={third01} top={810} left={600}/>
+        </Link>
+        <Link to="/geofront-04">
+          <Poster first={first04} second={second04} third={third04} top={100} left={100}/>
         </Link>
       </Scroll>
     </div>
@@ -67,16 +73,19 @@ function Floats() {
 function Static() {
   return (
     <Container>
-      <Link to="geofront-03">
+      <Link to="/geofront-04">
+        <IMG src={require("../media/posters/gf_four.png")} alt="GeoFront-04 Poster"/>
+      </Link>
+      <Link to="/geofront-03">
         <IMG src={require("../media/posters/gf_three.png")} alt="GeoFront-03 Poster"/>
       </Link>
-      <Link to="geofront-02">
+      <Link to="/geofront-02">
         <IMG src={require("../media/posters/gf_two.jpg")} alt="GeoFront-02 Poster"/>
       </Link>
-      <Link to="geofront-01">
+      <Link to="/geofront-01">
         <IMG src={require("../media/posters/gf_one.png")} alt="GeoFront-01 Poster"/>
       </Link>
-      <Link to="geofront-00">
+      <Link to="/geofront-00">
         <IMG src={require("../media/posters/gf_zero.png")} alt="GeoFront-00 Poster"/>
       </Link>
     </Container>

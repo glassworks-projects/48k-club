@@ -90,7 +90,22 @@ export default class OffPeak extends React.Component {
               <br />
               Click on the installments below to read the interviews and hear the playlists.
             </Description>
-            <Nav>
+            <Nav> 
+            <LI>
+                <ExtLink href="https://ins-rt.net/text/off-peak-jake-knight-club-djembe">
+                  JAKE KNIGHT
+                </ExtLink>
+              </LI>       
+            <LI>
+                <ExtLink href="https://ins-rt.net/text/off-peak-briana-cheng">
+                  BRIANA CHENG
+                </ExtLink>
+              </LI>          
+              <LI>
+                <ExtLink href="https://ins-rt.net/text/off-peak-martha">
+                  MARTHA
+                </ExtLink>
+              </LI>
             <LI>
                 <ExtLink href="https://weareinsert.com/textual/off-peak-nicole-ruggiero/">
                   NICOLE RUGGIERO

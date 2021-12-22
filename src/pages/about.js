@@ -70,7 +70,7 @@ export default class About extends React.Component {
             We aim to give you something that matters to you. <br />
             Good art, no bullshit.
             <br /> <br />
-            Say hi: <Mail href="mailto:hello@48k.club">hello@48k.club</Mail>
+            Say hi: hello &lt;at&gt; 48k.club
           </BodyText>
         </body>
       </Wrapper>
