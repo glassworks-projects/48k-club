@@ -4,6 +4,7 @@ import {Wrapper, Navigation, Bluebar, Socials, Poster} from "../components/expor
 import styled from "styled-components"
 import "../styles/global.css"
 
+// parallax poster layers
 import first00    from "../media/posters/zero-layers/first00.png"
 import second00   from "../media/posters/zero-layers/second00.png"
 import third00    from "../media/posters/zero-layers/third00.png"
@@ -19,6 +20,13 @@ import third03    from "../media/posters/three-layers/third03.png"
 import first04    from "../media/posters/four-layers/first04.png"
 import second04   from "../media/posters/four-layers/second04.png"
 import third04    from "../media/posters/four-layers/third04.png"
+
+// static imgs
+import gf_four    from "../media/posters/gf_four.png"
+import gf_three   from "../media/posters/gf_three.png"
+import gf_two     from "../media/posters/gf_two.png"
+import gf_one     from "../media/posters/gf_one.png"
+import gf_zero    from "../media/posters/gf_zero.png"
 
 const Scroll = styled.div`
   height: 1200px;
@@ -74,19 +82,19 @@ function Static() {
   return (
     <Container>
       <Link to="/geofront-04">
-        <IMG src={require("../media/posters/gf_four.png")} alt="GeoFront-04 Poster"/>
+        <IMG src={gf_four} alt="GeoFront-04 Poster"/>
       </Link>
       <Link to="/geofront-03">
-        <IMG src={require("../media/posters/gf_three.png")} alt="GeoFront-03 Poster"/>
+        <IMG src={gf_three} alt="GeoFront-03 Poster"/>
       </Link>
       <Link to="/geofront-02">
-        <IMG src={require("../media/posters/gf_two.jpg")} alt="GeoFront-02 Poster"/>
+        <IMG src={gf_two} alt="GeoFront-02 Poster"/>
       </Link>
       <Link to="/geofront-01">
-        <IMG src={require("../media/posters/gf_one.png")} alt="GeoFront-01 Poster"/>
+        <IMG src={gf_one} alt="GeoFront-01 Poster"/>
       </Link>
       <Link to="/geofront-00">
-        <IMG src={require("../media/posters/gf_zero.png")} alt="GeoFront-00 Poster"/>
+        <IMG src={gf_zero} alt="GeoFront-00 Poster"/>
       </Link>
     </Container>
   )
