@@ -38,13 +38,13 @@ export default class GF01 extends React.Component {
         heading="GEOFRONT"
         subheading="01"
         images={[
-          <div><img src={require("../media/gf01/gf01-01.jpg")} alt="event"/></div>,
-          <div><img src={require("../media/gf01/gf01-02.jpg")} alt="event"/></div>,
-          <div><img src={require("../media/gf01/gf01-03.jpg")} alt="event"/></div>,
-          <div><img src={require("../media/gf01/gf01-04.jpg")} alt="event"/></div>,
-          <div><img src={require("../media/gf01/gf01-05.jpg")} alt="event"/></div>,
-          <div><img src={require("../media/gf01/gf01-06.jpg")} alt="event"/></div>,
-          <div><img src={require("../media/gf01/gf01-07.jpg")} alt="event"/></div>
+          <div><img src={require("../media/gf01/gf01-01.jpg").default} alt="event"/></div>,
+          <div><img src={require("../media/gf01/gf01-02.jpg").default} alt="event"/></div>,
+          <div><img src={require("../media/gf01/gf01-03.jpg").default} alt="event"/></div>,
+          <div><img src={require("../media/gf01/gf01-04.jpg").default} alt="event"/></div>,
+          <div><img src={require("../media/gf01/gf01-05.jpg").default} alt="event"/></div>,
+          <div><img src={require("../media/gf01/gf01-06.jpg").default} alt="event"/></div>,
+          <div><img src={require("../media/gf01/gf01-07.jpg").default} alt="event"/></div>
           ]
         }
         text={[
