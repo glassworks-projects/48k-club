@@ -1,7 +1,7 @@
 import React from "react"
 import {ImgAbout, ExtLink} from "../../components/export"
 import cathedral from "../../media/album-artwork/cathedral.jpg"
-import {releasetext} from "../../text/release-about.json"
+import releasetext from "../../text/release-about.json"
 
 /*
  include: title, img, artistName, releaseName, text, href

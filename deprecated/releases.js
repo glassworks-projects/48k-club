@@ -5,7 +5,7 @@ import lapse from "../media/album-artwork/lapse.jpg"
 import st from "../media/album-artwork/st.jpg"
 import styled from "styled-components"
 import {Wrapper, Navigation, Bluebar, SVG, ExtLink, Socials} from "../components/export"
-import {releasetext} from "../text/release-about.json"
+import releasetext from "../text/release-about.json"
 import "../styles/global.css"
 
 const ReleaseNames = styled.ul`

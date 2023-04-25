@@ -1,7 +1,7 @@
 import React from "react"
 import {ExtLink, ImgAbout} from "../../components/export"
 import treewav from "../../media/album-artwork/tree-wav.jpg"
-import {releasetext} from "../../text/release-about.json"
+import releasetext from "../../text/release-about.json"
 
 /*
  include: title, img, artistName, releaseName, text, href

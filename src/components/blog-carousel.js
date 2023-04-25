@@ -1,5 +1,6 @@
 import React from "react"
-import {text, date} from "../text/blog-post-one.json"
+import text from "../text/blog-post-one.json"
+import date from "../text/blog-post-one.json"
 import acid from "../media/acid.png"
 import {BlogPost} from "../components/export"
 import {Carousel} from 'react-responsive-carousel'

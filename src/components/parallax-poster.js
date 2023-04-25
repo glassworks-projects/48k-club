@@ -45,15 +45,15 @@ export default function Poster({first, second, third, top, left}) {
   return (
     <div style={divStyle} onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}>
       <Card style={{
-        transform: props.xy.interpolate(trans1),
+        transform: props.xy.to(trans1),
         backgroundImage: `url(${first})`
       }} />
       <Card style={{
-        transform: props.xy.interpolate(trans2),
+        transform: props.xy.to(trans2),
         backgroundImage: `url(${second})`
       }} />
       <Card style={{
-        transform: props.xy.interpolate(trans3),
+        transform: props.xy.to(trans3),
         backgroundImage: `url(${third})`}}
       />
     </div>

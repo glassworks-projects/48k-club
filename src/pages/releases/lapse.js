@@ -1,7 +1,7 @@
 import React from "react"
 import {ImgAbout} from "../../components/export"
 import lapse from "../../media/album-artwork/lapse.jpg"
-import {releasetext} from "../../text/release-about.json"
+import releasetext from "../../text/release-about.json"
 
 export default class Lapse extends React.Component {
   constructor(props) {

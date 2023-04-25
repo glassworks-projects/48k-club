@@ -1,7 +1,7 @@
 import React from "react"
 import {ImgAbout} from "../../components/export"
 import bitl from "../../media/album-artwork/bitl.jpg"
-import {releasetext} from "../../text/release-about.json"
+import releasetext from "../../text/release-about.json"
 
 /*
  include: title, img, artistName, releaseName, text, href

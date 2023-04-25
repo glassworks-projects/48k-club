@@ -1,7 +1,7 @@
 import React from "react"
 import {ImgAbout, ExtLink} from "../../components/export"
 import formless from "../../media/album-artwork/formless.jpg"
-import {releasetext} from "../../text/release-about.json"
+import releasetext from "../../text/release-about.json"
 
 function Press() {
   return(
