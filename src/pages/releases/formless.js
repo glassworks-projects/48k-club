@@ -1,26 +1,22 @@
 import React from "react"
-import {ExtLink, ImgAbout} from "../components/export"
-import evaarp2 from "../media/album-artwork/evaarp2.jpg"
-import {releasetext} from "../text/release-about.json"
-
-/*
- include: title, img, artistName, releaseName, text, href
-*/
+import {ImgAbout, ExtLink} from "../../components/export"
+import formless from "../../media/album-artwork/formless.jpg"
+import {releasetext} from "../../text/release-about.json"
 
 function Press() {
   return(
     <div style={{paddingLeft: `2vw`}}>
       <p>
         <h3 style={{fontWeight: `300`}}>Press: </h3>
-        <ExtLink href="https://djmag.com/music/premiere-wild-kid-evaarp2">
-          Premiered at DJ Mag
+        <ExtLink href="https://djmag.com/music/bass/formless">
+          7.5/10 in DJ Mag
         </ExtLink>
       </p>
     </div>
   )
 }
 
-export default class EvaArp2 extends React.Component {
+export default class Formless extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -52,14 +48,14 @@ export default class EvaArp2 extends React.Component {
   render() {
     return(
       <ImgAbout
-        artistLink="https://soundcloud.com/adder48k/"
         gf={false}
-        title="48KS004 - Wild Kid - EVA.ARP2"
-        img={evaarp2}
-        heading = "WILD KID"
-        subheading = "EVA.ARP2"
-        text={releasetext.evaarp2_about}
-        href="https://48ksps.bandcamp.com/track/eva-arp2"
+        artistLink="https://soundcloud.com/adder48k"
+        title="48K003 - Wild Kid - Formless"
+        img={formless}
+        heading= "WILD KID"
+        subheading= "FORMLESS"
+        text={releasetext.formless_about}
+        href="http://smarturl.it/formless-ep"
         anythingElse={Press()}
       />
     )

@@ -1,7 +1,7 @@
 import React from "react"
-import {ExtLink, ImgAbout} from "../components/export"
-import extremelynaive from "../media/album-artwork/extremelynaive.jpg"
-import {releasetext} from "../text/release-about.json"
+import {ExtLink, ImgAbout} from "../../components/export"
+import lucha from "../../media/album-artwork/lucha.jpg"
+import {releasetext} from "../../text/release-about.json"
 
 /*
  include: title, img, artistName, releaseName, text, href
@@ -11,7 +11,7 @@ function Press() {
   return(
     <div style={{paddingLeft: `2vw`}}>
       <p>
-        <ExtLink href="https://beta.catalog.works/adder/extremely-na-ve">
+        <ExtLink href="https://beta.catalog.works/adder/-lucha-">
           View on Catalog
         </ExtLink>
       </p>
@@ -53,12 +53,12 @@ export default class ExtremelyNaive extends React.Component {
       <ImgAbout
         artistLink="https://soundcloud.com/adder48k/"
         gf={false}
-        title="48KS003 - Adder - Extremely Naïve"
-        img={extremelynaive}
+        title="48KS005 - Adder - ¡Lucha!"
+        img={lucha}
         heading = "ADDER"
-        subheading = "EXTREMELY NAIVE"
-        text={releasetext.extremelynaive_about}
-        href="https://48ksps.bandcamp.com/track/extremely-na-ve"
+        subheading = "LUCHA"
+        text={releasetext.lucha_about}
+        href="https://48ksps.bandcamp.com/track/lucha"
         anythingElse={Press()}
       />
     )

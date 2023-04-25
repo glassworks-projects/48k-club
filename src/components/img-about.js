@@ -4,6 +4,7 @@ import {Link} from "gatsby"
 import styled from "styled-components"
 import "../styles/global.css"
 import {Carousel} from 'react-responsive-carousel'
+import arrow from "../media/arrow.png"
 
 const Cover = styled.img`
   object-fit: contain;
@@ -123,7 +124,7 @@ export default function ImgAbout (props) {
         <Navigation />
         <Container>
           <L2 to={props.gf ? '/geofront' : '/releases'}>
-            <Arrow src={require("../media/arrow.png")} alt="back arrow"/>
+            <Arrow src={arrow} alt="back arrow"/>
           </L2>
           {props.gf ?
             <Crs

@@ -1,22 +1,25 @@
 import React from "react"
-import {ImgAbout, ExtLink} from "../components/export"
-import formless from "../media/album-artwork/formless.jpg"
-import {releasetext} from "../text/release-about.json"
+import {ExtLink, ImgAbout} from "../../components/export"
+import clickrefresh from "../../media/album-artwork/clickrefresh.jpg"
+import {releasetext} from "../../text/release-about.json"
+
+/*
+ include: title, img, artistName, releaseName, text, href
+*/
 
 function Press() {
   return(
     <div style={{paddingLeft: `2vw`}}>
       <p>
-        <h3 style={{fontWeight: `300`}}>Press: </h3>
-        <ExtLink href="https://djmag.com/music/bass/formless">
-          7.5/10 in DJ Mag
+        <ExtLink href="https://beta.catalog.works/adder/click-refresh">
+          View on Catalog
         </ExtLink>
       </p>
     </div>
   )
 }
 
-export default class Formless extends React.Component {
+export default class ExtremelyNaive extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -48,14 +51,14 @@ export default class Formless extends React.Component {
   render() {
     return(
       <ImgAbout
+        artistLink="https://soundcloud.com/adder48k/"
         gf={false}
-        artistLink="https://soundcloud.com/adder48k"
-        title="48K003 - Wild Kid - Formless"
-        img={formless}
-        heading= "WILD KID"
-        subheading= "FORMLESS"
-        text={releasetext.formless_about}
-        href="http://smarturl.it/formless-ep"
+        title="48KS008 - Adder - Click Refresh"
+        img={clickrefresh}
+        heading = "ADDER"
+        subheading = "CLICK REFRESH"
+        text={releasetext.clickrefresh_about}
+        href="https://48ksps.bandcamp.com/track/click-refresh"
         anythingElse={Press()}
       />
     )

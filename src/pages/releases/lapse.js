@@ -1,28 +1,9 @@
 import React from "react"
-import {ImgAbout, ExtLink} from "../components/export"
-import cathedral from "../media/album-artwork/cathedral.jpg"
-import {releasetext} from "../text/release-about.json"
+import {ImgAbout} from "../../components/export"
+import lapse from "../../media/album-artwork/lapse.jpg"
+import {releasetext} from "../../text/release-about.json"
 
-/*
- include: title, img, artistName, releaseName, text, href
-*/
-function Press() {
-  return (
-    <div style={{paddingLeft: `2vw`}}>
-      <p>
-        <h3 style={{fontWeight: `300`}}>Press: </h3>
-        <ExtLink href="https://www.tinymixtapes.com/chocolate-grinder/premiere-wild-kid-lapse">
-          "Lapse" premiered at Tiny Mix Tapes
-        </ExtLink> <br />
-        <ExtLink href="https://weareinsert.com/audio/premiere-wild-kid-cc-48k/">
-          "Cc" premiered at Insert
-        </ExtLink>
-      </p>
-    </div>
-  )
-}
-
-export default class Cathedral extends React.Component {
+export default class Lapse extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -54,21 +35,19 @@ export default class Cathedral extends React.Component {
   render() {
     return(
       <ImgAbout
-        artistLink="https://soundcloud.com/adder48k"
         gf={false}
-        title="48K001 - Wild Kid - Cathdedral"
-        img={cathedral}
+        title="48KS001 - Wild Kid - Lapse (Miracles Remix)"
+        img={lapse}
         heading= "WILD KID"
-        subheading= "CATHEDRAL"
-        text={releasetext.cath_about}
-        href="https://smarturl.it/cathedral"
-        anythingElse={Press()}
+        subheading= "LAPSE (MIRACLES REMIX)"
+        text={releasetext.lapse_about}
+        href="http://hyperurl.co/48ks001"
       />
     )
   }
 }
-
-// export default class Cathedral extends React.Component {
+//
+// export default class Lapse extends React.Component {
 //   constructor(props) {
 //     super(props);
 //     this.state = {
@@ -100,13 +79,12 @@ export default class Cathedral extends React.Component {
 //   render() {
 //     return(
 //       <Release
-//         title="48K001 - Wild Kid - Cathdedral"
-//         img={cathedral}
+//         title="48KS001 - Wild Kid - Lapse (Miracles Remix)"
+//         img={lapse}
 //         artistName= "WILD KID"
-//         releaseName= "CATHEDRAL"
-//         text={releasetext.cath_about}
-//         href="https://smarturl.it/cathedral"
-//         anythingElse={Press()}
+//         releaseName= "LAPSE (MIRACLES REMIX)"
+//         text={releasetext.lapse_about}
+//         href="http://hyperurl.co/48ks001"
 //       />
 //     )
 //   }

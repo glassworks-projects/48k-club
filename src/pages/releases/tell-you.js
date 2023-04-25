@@ -1,13 +1,25 @@
 import React from "react"
-import {ImgAbout} from "../components/export"
-import bitl from "../media/album-artwork/bitl.jpg"
-import {releasetext} from "../text/release-about.json"
+import {ExtLink, ImgAbout} from "../../components/export"
+import tellyou from "../../media/album-artwork/tellyou.jpg"
+import {releasetext} from "../../text/release-about.json"
 
 /*
  include: title, img, artistName, releaseName, text, href
 */
 
-export default class Bitl extends React.Component {
+function Press() {
+  return(
+    <div style={{paddingLeft: `2vw`}}>
+      <p>
+        <ExtLink href="https://couvrexchefs.com/en/callosum-awake-w-porter-brook-48k/">
+          "Awake (ft. Porter Brook) premiered at Couvre x Chefs"
+        </ExtLink>
+      </p>
+    </div>
+  )
+}
+
+export default class ExtremelyNaive extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -39,14 +51,15 @@ export default class Bitl extends React.Component {
   render() {
     return(
       <ImgAbout
-        artistLink="https://soundcloud.com/adoreadorexx"
+        artistLink="https://soundcloud.com/callosum-1/"
         gf={false}
-        title="48K004 - ADORE ADORE - Break In The Line"
-        img={bitl}
-        heading = "ADORE ADORE"
-        subheading = "BREAK IN THE LINE"
-        text={releasetext.bitl_about}
-        href="https://48ksps.bandcamp.com/album/break-in-the-line"
+        title="48K006 - Callosum - Tell You"
+        img={tellyou}
+        heading = "CALLOSUM"
+        subheading = "TELL YOU"
+        text={releasetext.tellyou_about}
+        href="https://48ksps.bandcamp.com/album/tell-you"
+        anythingElse={Press()}
       />
     )
   }
