@@ -1,7 +1,8 @@
 import React from "react"
 import {ExtLink, ImgAbout} from "../../components/export"
 import extremelynaive from "../../media/album-artwork/extremelynaive.jpg"
-import releasetext from "../../text/release-about.json"
+
+const releaseText = require("../../text/release-about.json").releasetext.extremelynaive_about
 
 /*
  include: title, img, artistName, releaseName, text, href
@@ -57,7 +58,7 @@ export default class ExtremelyNaive extends React.Component {
         img={extremelynaive}
         heading = "ADDER"
         subheading = "EXTREMELY NAIVE"
-        text={releasetext.extremelynaive_about}
+        text={releaseText}
         href="https://48ksps.bandcamp.com/track/extremely-na-ve"
         anythingElse={Press()}
       />

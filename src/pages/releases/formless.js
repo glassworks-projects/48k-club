@@ -1,7 +1,8 @@
 import React from "react"
 import {ImgAbout, ExtLink} from "../../components/export"
 import formless from "../../media/album-artwork/formless.jpg"
-import releasetext from "../../text/release-about.json"
+
+const releaseText = require("../../text/release-about.json").releasetext.formless_about
 
 function Press() {
   return(
@@ -54,7 +55,7 @@ export default class Formless extends React.Component {
         img={formless}
         heading= "WILD KID"
         subheading= "FORMLESS"
-        text={releasetext.formless_about}
+        text={releaseText}
         href="http://smarturl.it/formless-ep"
         anythingElse={Press()}
       />

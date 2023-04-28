@@ -1,7 +1,8 @@
 import React from "react"
 import {ExtLink, ImgAbout} from "../../components/export"
 import st from "../../media/album-artwork/st.jpg"
-import releasetext from "../../text/release-about.json"
+
+const releaseText = require("../../text/release-about.json").releasetext.st_about
 
 /*
  include: title, img, artistName, releaseName, text, href
@@ -69,7 +70,7 @@ export default class ScreamTape extends React.Component {
         img={st}
         heading = "WILD KID"
         subheading = "SCREAM TAPE"
-        text={releasetext.st_about}
+        text={releaseText}
         href="https://smarturl.it/screamtape"
         anythingElse={Press()}
       />

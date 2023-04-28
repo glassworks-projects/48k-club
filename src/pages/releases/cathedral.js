@@ -1,7 +1,8 @@
 import React from "react"
 import {ImgAbout, ExtLink} from "../../components/export"
 import cathedral from "../../media/album-artwork/cathedral.jpg"
-import releasetext from "../../text/release-about.json"
+
+const releaseText = require("../../text/release-about.json").releasetext.cath_about
 
 /*
  include: title, img, artistName, releaseName, text, href
@@ -60,7 +61,7 @@ export default class Cathedral extends React.Component {
         img={cathedral}
         heading= "WILD KID"
         subheading= "CATHEDRAL"
-        text={releasetext.cath_about}
+        text={releaseText}
         href="https://smarturl.it/cathedral"
         anythingElse={Press()}
       />

@@ -1,7 +1,8 @@
 import React from "react"
 import {ExtLink, ImgAbout} from "../../components/export"
 import tellyou from "../../media/album-artwork/tellyou.jpg"
-import releasetext from "../../text/release-about.json"
+
+const releaseText = require("../../text/release-about.json").releasetext.tellyou_about
 
 /*
  include: title, img, artistName, releaseName, text, href
@@ -57,8 +58,8 @@ export default class ExtremelyNaive extends React.Component {
         img={tellyou}
         heading = "CALLOSUM"
         subheading = "TELL YOU"
-        text={releasetext.tellyou_about}
-        href="https://48ksps.bandcamp.com/album/tell-you"
+        text={releaseText}
+        href="https://48k.ffm.to/tell-you"
         anythingElse={Press()}
       />
     )

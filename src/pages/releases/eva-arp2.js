@@ -1,7 +1,8 @@
 import React from "react"
 import {ExtLink, ImgAbout} from "../../components/export"
 import evaarp2 from "../../media/album-artwork/evaarp2.jpg"
-import releasetext from "../../text/release-about.json"
+
+const releaseText = require("../../text/release-about.json").releasetext.evaarp2_about
 
 /*
  include: title, img, artistName, releaseName, text, href
@@ -58,7 +59,7 @@ export default class EvaArp2 extends React.Component {
         img={evaarp2}
         heading = "WILD KID"
         subheading = "EVA.ARP2"
-        text={releasetext.evaarp2_about}
+        text={releaseText}
         href="https://48ksps.bandcamp.com/track/eva-arp2"
         anythingElse={Press()}
       />

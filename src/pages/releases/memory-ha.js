@@ -1,7 +1,8 @@
 import React from "react"
 import {ExtLink, ImgAbout} from "../../components/export"
 import memoryha from "../../media/album-artwork/memoryha.jpg"
-import releasetext from "../../text/release-about.json"
+
+const releaseText = require("../../text/release-about.json").releasetext.memoryha_about
 
 /*
  include: title, img, artistName, releaseName, text, href
@@ -64,7 +65,7 @@ export default class MemoryHa extends React.Component {
         img={memoryha}
         heading = "MIRACLES"
         subheading = "MEMORY HA"
-        text={releasetext.memoryha_about}
+        text={releaseText}
         href="https://48ksps.bandcamp.com/album/memory-ha"
         anythingElse={Press()}
       />

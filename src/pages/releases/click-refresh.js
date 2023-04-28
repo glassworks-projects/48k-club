@@ -1,7 +1,8 @@
 import React from "react"
 import {ExtLink, ImgAbout} from "../../components/export"
 import clickrefresh from "../../media/album-artwork/clickrefresh.jpg"
-import releasetext from "../../text/release-about.json"
+
+const releaseText = require("../../text/release-about.json").releasetext.clickrefresh_about
 
 /*
  include: title, img, artistName, releaseName, text, href
@@ -57,7 +58,7 @@ export default class ExtremelyNaive extends React.Component {
         img={clickrefresh}
         heading = "ADDER"
         subheading = "CLICK REFRESH"
-        text={releasetext.clickrefresh_about}
+        text={releaseText}
         href="https://48ksps.bandcamp.com/track/click-refresh"
         anythingElse={Press()}
       />

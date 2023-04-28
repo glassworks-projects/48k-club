@@ -1,7 +1,8 @@
 import React from "react"
 import {ImgAbout} from "../../components/export"
 import bitl from "../../media/album-artwork/bitl.jpg"
-import releasetext from "../../text/release-about.json"
+
+const releaseText = require("../../text/release-about.json").releasetext.bitl_about
 
 /*
  include: title, img, artistName, releaseName, text, href
@@ -45,7 +46,7 @@ export default class Bitl extends React.Component {
         img={bitl}
         heading = "ADORE ADORE"
         subheading = "BREAK IN THE LINE"
-        text={releasetext.bitl_about}
+        text={releaseText}
         href="https://48ksps.bandcamp.com/album/break-in-the-line"
       />
     )

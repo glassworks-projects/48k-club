@@ -1,7 +1,8 @@
 import React from "react"
 import {ExtLink, ImgAbout} from "../../components/export"
 import treewav from "../../media/album-artwork/tree-wav.jpg"
-import releasetext from "../../text/release-about.json"
+
+const releaseText = require("../../text/release-about.json").releasetext.tree_wav_about
 
 /*
  include: title, img, artistName, releaseName, text, href
@@ -57,7 +58,7 @@ export default class ExtremelyNaive extends React.Component {
         img={treewav}
         heading = "ADDER"
         subheading = "TREE.WAV"
-        text={releasetext.tree_wav_about}
+        text={releaseText}
         href="https://48ksps.bandcamp.com/track/tree-wav"
         anythingElse={Press()}
       />
