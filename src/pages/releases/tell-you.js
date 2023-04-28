@@ -13,7 +13,10 @@ function Press() {
     <div style={{paddingLeft: `2vw`}}>
       <p>
         <ExtLink href="https://couvrexchefs.com/en/callosum-awake-w-porter-brook-48k/">
-          "Awake (ft. Porter Brook) premiered at Couvre x Chefs"
+          "Awake (ft. Porter Brook)" premiered at Couvre x Chefs
+        </ExtLink> <br />
+        <ExtLink href="https://soundcloud.com/four-heads/01-tell-you-2">
+          "Tell You" premiered at Four Heads
         </ExtLink>
       </p>
     </div>
